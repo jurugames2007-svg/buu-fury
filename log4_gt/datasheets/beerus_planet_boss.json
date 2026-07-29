@@ -1,0 +1,36 @@
+{
+  "map_name": "Planeta de Bills (Beerus's Planet — Other World)",
+  "access_method": "Portal opened by Whis on Snake Way / Planet of the Kais after defeating Majin Buu",
+  "npcs": [
+    {
+      "name": "Whis",
+      "role": "Divine Merchant & Portal Master",
+      "dialogue_file": "log4_gt/dialogues/beerus_planet_and_whis_shop.txt",
+      "shop": "Tienda Divina de Whis (items_and_shops.json)"
+    }
+  ],
+  "boss_encounter": {
+    "name": "Beerus (Bills) — Dios de la Destrucción",
+    "title": "God of Destruction — Universe 7",
+    "level": 250,
+    "hp": 150000,
+    "strength": 450,
+    "defense": 400,
+    "speed": 350,
+    "ki_power": 500,
+    "skills": [
+      "Hakai / Energy of Destruction (0x5A)",
+      "God of Destruction Wrath (0x5B)",
+      "Cataclysmic Orb (0x5C)",
+      "Finger Flick (0x5D)"
+    ],
+    "comparison_vs_vanilla": "4.6x stronger HP than Kid Buu (32,000 HP). Designed as the ultimate God-tier test of strength for Goku SSJ4 and Gogeta SSJ4.",
+    "visual_assets": {
+      "portrait": "portrait_beerus.png (128x144, 16-color GBA palette)",
+      "spritesheet": "beerus_god_spritesheet.png",
+      "palette": "beerus_god_palette.pal (15-bit BGR)",
+      "tile_data": "beerus_god_sprites_compressed.bin (4bpp LZ77)"
+    },
+    "reward": "Divine Destruction Aura unlock + 10,000,000 EXP"
+  }
+}

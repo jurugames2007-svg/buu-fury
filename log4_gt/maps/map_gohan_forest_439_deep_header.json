@@ -1,0 +1,29 @@
+{
+  "map_id": "map_gohan_forest_439_deep",
+  "name": "Bosque Oeste Distrito 439 (Zaiko Boss Map)",
+  "dimensions": {
+    "width_tiles": 64,
+    "height_tiles": 64
+  },
+  "tileset_offset": "0x08A00000",
+  "palette_offset": "0x08A10000",
+  "tilemap_file": "map_gohan_forest_439_deep.bin",
+  "collision_file": "map_gohan_forest_439_deep_collision.bin",
+  "preview_image": "map_gohan_forest_439_deep_preview.png",
+  "music_track_id": 140,
+  "npcs": [
+    {
+      "name": "Zaiko (Boss)",
+      "type": 95,
+      "pos_x": 32,
+      "pos_y": 21
+    }
+  ],
+  "triggers": [
+    {
+      "type": "portal",
+      "target_map": "Snakeway",
+      "zone_y": 63
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "map_id": "map_beerus_planet",
+  "name": "Planeta de Bills (Other World)",
+  "dimensions": {
+    "width_tiles": 64,
+    "height_tiles": 64
+  },
+  "tileset_offset": "0x08A00000",
+  "palette_offset": "0x08A10000",
+  "tilemap_file": "map_beerus_planet.bin",
+  "collision_file": "map_beerus_planet_collision.bin",
+  "preview_image": "map_beerus_planet_preview.png",
+  "music_track_id": 138,
+  "npcs": [
+    {
+      "name": "Whis",
+      "type": 82,
+      "pos_x": 32,
+      "pos_y": 15
+    }
+  ],
+  "triggers": [
+    {
+      "type": "portal",
+      "target_map": "Snakeway",
+      "zone_y": 63
+    }
+  ]
+}

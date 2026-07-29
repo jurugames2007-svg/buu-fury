@@ -1,0 +1,46 @@
+{
+  "boss_name": "Zaiko (Xicor)",
+  "title": "Post-Game Ultimate Adversary — AF DLC",
+  "location": {
+    "map_name": "East District 439 (Forest outside Adult Gohan's house)",
+    "chapter": "Post-Game (After defeating Kid Buu)",
+    "description": "Located in the deep western woods of East District 439, a short distance from Goku and Gohan's house where Adult Gohan begins his chapter in Buu's Fury."
+  },
+  "lore_background": "The genetically engineered hybrid son of Son Goku and the Western Supreme Kai from the dark realm (Dragon Ball AF post-game lore). Zaiko arrives on Earth after Kid Buu's destruction to claim dominance over the Saiyan bloodline.",
+  "stat_comparison": {
+    "kid_buu_vanilla": {
+      "level": 140,
+      "hp": 32000,
+      "strength": 150,
+      "defense": 140,
+      "speed": 135,
+      "ki_power": 160
+    },
+    "zaiko_postgame_boss": {
+      "level": 200,
+      "hp": 99999,
+      "strength": 350,
+      "defense": 320,
+      "speed": 280,
+      "ki_power": 380,
+      "power_multiplier_vs_kid_buu": "3.1x HP, 2.3x Attack, 2.3x Defense"
+    }
+  },
+  "visual_design": {
+    "portrait": "portrait_zaiko.png (128x144, 16-color GBA palette, silver SSJ5 hair, green chin horns, crimson eyes)",
+    "spritesheet": "zaiko_af_spritesheet.png (Webfoot chibi proportions, dark Kaioshin tunic, red sash, gold buckles)",
+    "palette": "zaiko_palette.pal (16 colors indexed, GBA 15-bit BGR format)",
+    "tile_data": "zaiko_sprites_compressed.bin (4bpp planar GBA tiles, LZ77 compressed header)"
+  },
+  "combat_skills": [
+    "Kaioshin Energy Wave (0x4A)",
+    "Dark Kamehameha (0x4B)",
+    "Silver Horn Strike (0x4C)",
+    "Dimension Ripper (0x4D)"
+  ],
+  "rewards": {
+    "exp": 5000000,
+    "drop_item": "Reliquia de Zaiko / AF Dragon Relic",
+    "unlock": "SSJ4 Maximum Limit Breaker title"
+  }
+}

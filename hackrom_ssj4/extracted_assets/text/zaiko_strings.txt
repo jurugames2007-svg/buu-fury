@@ -1,0 +1,6 @@
+[0x7C0000] Zaiko: ¿Así que este es el planeta Tierra? ¡Mi nombre es Zaiko!
+[0x7C0040] Zaiko: Llevo la sangre de Son Goku y el poder supremo de los Kaioshin.
+[0x7C0080] Zaiko: Kid Buu no era más que un monstruo primitivo comparado conmigo...
+[0x7C00C0] Gohan: ¡Tu Ki es gigantesco! ¡Es muy superior al de Kid Buu!
+[0x7C0100] Zaiko: ¡Muéstrame si el Super Saiyan 4 de Goku basta para desafiarme!
+[0x7C0140] [BOSS: ZAIKO - HP: 99999 - LV: 200 - DROP: RELIQUIA AF]

@@ -6,7 +6,11 @@
     "SS4 Goku form name + Super Saiyan 4 skill",
     "Red-fur SSJ4 palette (better than SS3)",
     "King Kai teaches SS + SS4 when you talk to him",
-    "Skills: IT, Kamehameha, Super Saiyan, Super Saiyan 4"
+    "Skills: IT, Kamehameha, Super Saiyan, Super Saiyan 4",
+    "Post-Game Boss Zaiko (Xicor) in East District 439 Forest (outside Adult Gohan's house)",
+    "Zaiko stats: HP 99,999, Level 200 \u2014 much stronger than Kid Buu",
+    "GBA-compatible 4bpp planar sprites and 16-color indexed palettes for SSJ4 and Zaiko",
+    "Custom dialogue for East Kai on Snake Way and Zaiko boss battle encounter"
   ],
   "key_offsets": {
     "form_name": "0x583F6",
@@ -21,7 +25,10 @@
       "0x74F28",
       "0x74F50",
       "0x75290"
-    ]
+    ],
+    "zaiko_dialogue": "0x7C0000",
+    "zaiko_sprites": "0x7C0400",
+    "zaiko_palette": "0x7C2400"
   },
   "changes": [
     {
@@ -179,6 +186,18 @@
       "offset": "0xBD",
       "old_hex": "84",
       "new_hex": "84"
+    },
+    {
+      "description": "Zaiko Boss string table injection",
+      "offset": "0x7C0000",
+      "old_hex": "ffffffffffffffff",
+      "new_hex": "5a61696b6f3a20bf"
+    },
+    {
+      "description": "Zaiko Boss stats table override (HP 99999, LVL 200)",
+      "offset": "0x7C0300",
+      "old_hex": "ffffffffffffffff",
+      "new_hex": "9f860100c8000000"
     }
   ]
 }

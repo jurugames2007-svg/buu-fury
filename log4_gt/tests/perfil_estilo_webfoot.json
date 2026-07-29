@@ -1,0 +1,405 @@
+{
+  "game": "Dragon Ball Z: Buu's Fury (USA)",
+  "style_archetype": "Webfoot Super-Deformed (SD) / Chibi Action RPG",
+  "global_rules": {
+    "dithering": "NONE",
+    "anti_aliasing": "NONE",
+    "outline_thickness_px": 1,
+    "outline_color_hex": "#080606",
+    "shading_technique": "3-Tone Anime Cel-Shading (Base -> Dark Shadow -> Light Highlight)",
+    "proportions": "Head 40% (24px height), Torso 32% (19px height), Legs 28% (16px height)",
+    "head_to_body_ratio": "1:1.5"
+  },
+  "color_palette_catalog": {
+    "global_colors_hex": [
+      "#080606",
+      "#0F0A0A",
+      "#19191C",
+      "#232328",
+      "#50A0FF",
+      "#64B4FF",
+      "#781412",
+      "#A01919",
+      "#B4231E",
+      "#C81E1E",
+      "#FF5A28",
+      "#FFB428",
+      "#FFC828",
+      "#FFC89B",
+      "#FFFFFF"
+    ],
+    "total_unique_colors": 15
+  },
+  "sprites_catalog": [
+    {
+      "nombre": "ssj4_dragon0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 12,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#FFC89B",
+        "#19191C",
+        "#FFC828",
+        "#C81E1E",
+        "#FFB428",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        20287,
+        3171,
+        5951,
+        3193,
+        5855,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_hit0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#19191C",
+        "#FFC89B",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        3171,
+        20287,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_idle0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 48,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#19191C",
+        "#FFC89B",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        3171,
+        20287,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_idle1.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#19191C",
+        "#FFC89B",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        3171,
+        20287,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_kame0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 12,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#FFC89B",
+        "#19191C",
+        "#C81E1E",
+        "#781412",
+        "#64B4FF",
+        "#50A0FF",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        20287,
+        3171,
+        3193,
+        2127,
+        32460,
+        32394,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_punch0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 11,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#FFC89B",
+        "#19191C",
+        "#FF5A28",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        20287,
+        3171,
+        5503,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_roar0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#FFC89B",
+        "#19191C",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        20287,
+        3171,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_special0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#FFC89B",
+        "#19191C",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        20287,
+        3171,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_walk0.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#19191C",
+        "#FFC89B",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        3171,
+        20287,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    },
+    {
+      "nombre": "ssj4_walk1.png",
+      "categoria": "personaje",
+      "personaje": "SSJ4 Goku",
+      "dimensiones": {
+        "ancho": 64,
+        "alto": 64
+      },
+      "num_colores_usados": 10,
+      "colores_hex": [
+        "#FFFFFF",
+        "#B4231E",
+        "#A01919",
+        "#232328",
+        "#19191C",
+        "#FFC89B",
+        "#C81E1E",
+        "#781412",
+        "#0F0A0A",
+        "#080606"
+      ],
+      "colores_gba_15bit": [
+        32767,
+        3222,
+        3188,
+        5252,
+        3171,
+        20287,
+        3193,
+        2127,
+        1057,
+        1
+      ],
+      "tipo_contorno": "negro s\u00f3lido (1px contour)",
+      "tecnica_sombreado": "3-tone cel shading"
+    }
+  ]
+}

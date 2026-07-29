@@ -1,0 +1,145 @@
+{
+  "title": "Dragon Ball Z: The Legacy of Goku 4 — Complete GT & AF Absolute Legacy Database",
+  "level_range": {
+    "start_level": 140,
+    "gt_climax_level": 200,
+    "af_climax_level": 350
+  },
+  "planetary_exploration_system": {
+    "space_ship_hub": "Capsule Corporation Spacecraft Grid Navigator (Isometric planetary maps)",
+    "planets": [
+      {
+        "name": "Planeta Imecka",
+        "zones": ["Desierto de Chatarra", "Ciudad Monopolio", "Palacio de Don Kee"],
+        "mechanic": "Embargo Zones: 50% Zeni penalty if caught by Don Kee guards; switch puzzle in garbage bins."
+      },
+      {
+        "name": "Planeta Monmaasu",
+        "zones": ["Bosque de Raíces Gigantes", "Nido de las Abejas Gigantes"],
+        "mechanic": "Vertical Isometric Climbing: Pan's Flight required; cosmic wind pushes sprite sideways above poisonous swamp (-50 HP/s)."
+      },
+      {
+        "name": "Planeta Gelba",
+        "zones": ["Cañón de Hielo", "Minas de Katchin Azules"],
+        "mechanic": "Slide Physics: 3-tile slide after releasing D-Pad; blue Katchin stalagmites require charged Ki blasts."
+      },
+      {
+        "name": "Planeta M2",
+        "zones": ["Pistas de Ensamblaje", "Núcleo del General Rilldo"],
+        "mechanic": "Conveyor Belts & Hydraulic Presses: 2-second drop pattern causing 4-second Stun."
+      },
+      {
+        "name": "Planeta Neo Tsufuru",
+        "zones": ["Torres de Control", "Valle de la Mutación Parásita"],
+        "mechanic": "Mass Portals: Require accumulating 10,000 melee damage points to open."
+      },
+      {
+        "name": "Mapamundi de la Tierra Corrupta",
+        "zones": ["Central Eléctrica de la Luz", "Ciudad Inundada", "Volcán de Hielo"],
+        "mechanic": "Elemental barriers blocked by Shadow Dragons; opposite element required to unlock."
+      },
+      {
+        "name": "Planeta Sagrado de los Kaios Corrupto (AF)",
+        "zones": ["Cráter del Impacto", "Santuario Profanado"],
+        "mechanic": "Z-Sword Seal: 3 stone pedestals require sacrificing 80% current Ki to unlock."
+      },
+      {
+        "name": "El Vacío Absoluto (AF)",
+        "zones": ["Plataformas de Cristal Flotantes", "El Templo Invertido"],
+        "mechanic": "Inverted Gravity: 180-degree isometric rotation with inverted D-Pad controls."
+      },
+      {
+        "name": "La Tierra del Caos Absoluto (AF)",
+        "zones": ["Ruinas de la Capital", "El Infierno Terrenal"],
+        "mechanic": "Ki Corruption: Open overworld drains Ki regeneration to zero; safe Light Circles required."
+      }
+    ]
+  },
+  "character_database": {
+    "goku": {
+      "forms": ["Base Kid", "SSJ1", "SSJ3", "SSJ4", "SSGod", "SSJ5"],
+      "skills": ["Kamehameha x10 (200 EP, 4500 DMG)", "Transmisión Instantánea de Asalto (80 EP)", "Supreme Kamehameha Dorado SSJ5 (500 EP, 25000 DMG)"]
+    },
+    "vegeta": {
+      "forms": ["Base GT", "SSJ1", "SSJ2", "SSJ4 (Requires Blutz Wave Generator)", "SSJ5"],
+      "skills": ["Final Shine Attack (180 EP, 3800 DMG)", "Escudo de Orgullo (120 EP, converts projectiles to EXP)", "Final Galick Blaze SSJ5 (620 EP, 32000 DMG)"]
+    },
+    "pan": {
+      "forms": ["Base (+ Giru Assist)"],
+      "special_trait": "3 Accessory slots (Saiyans limited to 2)",
+      "skills": ["Escáner de Datos Giru (50 EP, shows elemental weakness & -30% DEF)", "Misil de Congelación (90 EP, 3s freeze)"]
+    },
+    "trunks": {
+      "forms": ["Base Capsule Leader", "SSJ1"],
+      "skills": ["Buster Cannon (110 EP, 2900 DMG in 4x4 grid)", "Guardia de Espada (10 Stamina/sec, -90% frontal damage)"]
+    },
+    "majuub": {
+      "forms": ["Permanent Sacred Warrior Fusion"],
+      "skills": ["Onda de Chocolate Inversa (150 EP, turns foes < LV 160 into 1000 HP candy)", "Cañón Relámpago (140 EP, 3200 DMG screen sweep)"]
+    },
+    "gogeta": {
+      "forms": ["Gogeta SSJ4 (GT Climax vs Omega)", "Gogeta SSJ5 (AF Climax vs Evil Goku)"],
+      "skills": ["Big Bang Kamehameha x100", "100x Big Bang Kamehameha Final"]
+    }
+  },
+  "boss_compendium": [
+    {
+      "name": "Don Kee de Imecka",
+      "level": 145,
+      "mechanic": "Golden 3-legged Mech with frontal shield; Pan distracts, switch to Trunks with SELECT to cut rear wires."
+    },
+    {
+      "name": "General Rilldo / Meta-Rilldo",
+      "level": 160,
+      "mechanic": "Phase 1: Rocket fists & metal floor trap. Phase 2: Giant factory fusion sprite; strike red core every 5s."
+    },
+    {
+      "name": "Baby Vegeta / Golden Oozaru",
+      "level": 178,
+      "mechanic": "Phase 1: Strong Form 2, Dark Final Flash. Phase 2: Giant Golden Ape on Planet Plant; fly to ears to destroy internal parasites."
+    },
+    {
+      "name": "Súper Androide 17",
+      "level": 190,
+      "mechanic": "Total Absorption stance heals double from Ki blasts; requires physical combos and Trunks/Vegeta perfect guard."
+    },
+    {
+      "name": "Omega Shenron",
+      "level": 200,
+      "mechanic": "Phase 1: 7-dragon element rotation. Phase 2: Grey sprite, double stats, Minus Energy Ball (instant Game Over if it hits ground). Requires Gogeta SSJ4 fusion."
+    },
+    {
+      "name": "Zaiko — El Saiyajin Prohibido",
+      "level": 250,
+      "mechanic": "Phase 1: Physical parry shield against Ki. Phase 2: Genetic Release aura drains 100 HP/s; Death Burst bullet hell requires SELECT character switching."
+    },
+    {
+      "name": "Ángel Z — El Juicio Final",
+      "level": 300,
+      "mechanic": "Phase 1: Geometric energy node barriers. Phase 2: Divine Unleashed form immune to normal attacks; requires Void Mirror relic to reflect holy light."
+    },
+    {
+      "name": "Evil Goku — El Fin de los Tiempos",
+      "level": 350,
+      "mechanic": "Phase 1: Dark Saiyan afterimage clones. Phase 2: Chaos Fusion 4 health bars; requires Gogeta SSJ5 100x Big Bang Kamehameha Final."
+    }
+  ],
+  "relics_and_capsule_tech": [
+    {"name": "Píldora de Rejuvenecimiento Tsufuru", "effect": "100% HP restore, 0 Ki for 10s. Price: 1500 Zeni"},
+    {"name": "Agua Ultra Sagrada Refinada", "effect": "Instantly cures mind control and elemental poisons."},
+    {"name": "Caramelo de Oolong", "effect": "+50% running speed for 3 minutes."},
+    {"name": "Generador de Rayos Blutz", "effect": "Vegeta accessory required to unlock Super Saiyan 4."},
+    {"name": "Sensor de Movimiento de Giru", "effect": "Green UI blink reveals hidden chests behind false walls."},
+    {"name": "Traje de Pesos Gravitacionales", "effect": "-25% movement speed, +100% EXP gain."},
+    {"name": "Guantes de Katchin Macizo", "effect": "+150 base physical damage; breaks dark grey boulders without Ki."},
+    {"name": "Espejo del Vacío", "effect": "Reflects Light element attacks and prevents Blindness state."},
+    {"name": "Núcleo Genético de Zaiko", "effect": "+2500 base physical attack; drains 50 HP per physical hit."}
+  ],
+  "npcs_and_side_quests": [
+    {"npc": "Bulma", "location": "Capsule Corp Spaceship", "role": "Stat resets for 10,000 Zeni & Giru missile ammo crafting"},
+    {"npc": "Mr. Satán", "location": "Satan City Gym Roof", "role": "Quest 'El Heredero Legítimo' -> Champion Belt (double Zeni drops)"},
+    {"npc": "Anciano Kaiosama", "location": "Sacred World of the Kais", "role": "1-minute real-time patience ritual unlocks Level 200 & 350 level caps"},
+    {"quest": "Los Planos Ocultos del Dr. Myuu", "reward": "Peto de Aleación M2 (+80 General DEF)"},
+    {"quest": "Las Almas Arrepentidas del Infierno", "reward": "Halo del Más Allá (-50% Ki cost on all transformations)"}
+  ]
+}

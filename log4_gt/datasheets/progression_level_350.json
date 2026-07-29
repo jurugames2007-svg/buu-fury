@@ -1,0 +1,59 @@
+{
+  "progression_title": "Legacy of Goku 4 — Level Cap 350 Extended Growth Curve",
+  "max_level": 350,
+  "experience_curve": "Quadratic scaling from Level 1 (0 EXP) to Level 350 (250,000,000 EXP total)",
+  "stat_scaling_per_level": {
+    "hp_gain": "+150 per level",
+    "str_gain": "+3.5 per level",
+    "def_gain": "+3.0 per level",
+    "spd_gain": "+2.0 per level",
+    "ki_gain": "+5.0 per level"
+  },
+  "boss_milestones": [
+    {
+      "milestone": "Majin Buu Climax (Vanilla Final Boss)",
+      "boss_name": "Kid Buu",
+      "level": 140,
+      "hp": 32000,
+      "str": 150,
+      "def": 140,
+      "reward": "Unlocks Other World Snake Way & Post-Game GT / AF / Divine chapters"
+    },
+    {
+      "milestone": "Dragon Ball GT Shadow Dragons Climax",
+      "boss_name": "Omega Shenron (Omega Shenron)",
+      "level": 240,
+      "hp": 120000,
+      "str": 300,
+      "def": 270,
+      "reward": "Unlocks Gogeta Super Saiyan 4 (Form 0x1B) + Big Bang Kamehameha x100 (Skill 0x1C)"
+    },
+    {
+      "milestone": "Dragon Ball AF Secret Post-Game Encounter (Gohan's Forest)",
+      "boss_name": "Zaiko (Xicor)",
+      "level": 280,
+      "hp": 180000,
+      "str": 380,
+      "def": 340,
+      "reward": "Drops Zaiko's Earring (Reliquia AF) + 15,000,000 EXP"
+    },
+    {
+      "milestone": "Other World Divine Trial (Beerus's Planet)",
+      "boss_name": "Beerus (Bills) — Dios de la Destrucción",
+      "level": 320,
+      "hp": 250000,
+      "str": 480,
+      "def": 420,
+      "reward": "Whis invites Goku for Divine God Ki Training"
+    },
+    {
+      "milestone": "Whis's Ultimate Master Trial (Level 350 Cap Challenge)",
+      "boss_name": "Whis (Angel Attendant)",
+      "level": 350,
+      "hp": 350000,
+      "str": 550,
+      "def": 500,
+      "reward": "Unlocks Super Saiyan God (SSGod / SSJ God - Form 0x06) + God Kamehameha (Skill 0x1D)"
+    }
+  ]
+}

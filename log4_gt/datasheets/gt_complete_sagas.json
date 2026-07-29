@@ -1,0 +1,102 @@
+{
+  "title": "Dragon Ball Z: The Legacy of Goku 4 — Complete GT Sagas Cinematic Architecture",
+  "storytelling_style": "Webfoot In-Engine Cinematic Cutscenes (Title Cards, 128x144 GBA Portraits, Scripted Boxes)",
+  "dialogue_file": "log4_gt/dialogues/gt_full_story_cinematics.txt",
+  "sagas": [
+    {
+      "saga_id": 1,
+      "chapter_banner": "CHAPTER 1: THE BLACK STAR DRAGON BALLS",
+      "episodes": "1 - 16",
+      "cinematics": [
+        {
+          "cutscene_id": "GT-C01",
+          "title": "Pilaf's Accidental Wish",
+          "location": "Lookout (Templo Sagrado)",
+          "portraits_used": ["portrait_base.png"],
+          "script_event": "Pilaf summons Black Smoke Shenron; Goku is turned into Kid Goku."
+        },
+        {
+          "cutscene_id": "GT-C02",
+          "title": "Space Launching from Capsule Corp",
+          "location": "Capsule Corporation",
+          "portraits_used": ["portrait_base.png"],
+          "script_event": "Pan sneaks onto the spaceship with Kid Goku and Trunks."
+        },
+        {
+          "cutscene_id": "GT-C03",
+          "title": "Planet Imecka & Bodyguard Ledgic",
+          "location": "Planet Imecka (map_imecka)",
+          "portraits_used": ["portrait_ssj1.png"],
+          "boss_battle": "Ledgic (Level 160, HP 45,000)"
+        }
+      ]
+    },
+    {
+      "saga_id": 2,
+      "chapter_banner": "CHAPTER 2: BABY, THE TUFFLE AVENGER",
+      "episodes": "17 - 40",
+      "cinematics": [
+        {
+          "cutscene_id": "GT-C04",
+          "title": "Return to an Infected Earth",
+          "location": "Earth Overworld",
+          "portraits_used": ["portrait_ssj1.png"],
+          "script_event": "Baby Vegeta reveals he possessed Gohan, Goten, and Vegeta."
+        },
+        {
+          "cutscene_id": "GT-C05",
+          "title": "SSJ4 Awakening on Planet Plant",
+          "location": "New Planet Plant (map_tuffle_planet)",
+          "portraits_used": ["portrait_ssj4.png"],
+          "script_event": "Pan's tears awaken Goku from Golden Oozaru into Super Saiyan 4.",
+          "boss_battle": "Baby Vegeta Golden Oozaru (Level 200, HP 85,000)"
+        }
+      ]
+    },
+    {
+      "saga_id": 3,
+      "chapter_banner": "CHAPTER 3: THE ULTIMATE ANDROID, SUPER 17",
+      "episodes": "41 - 47",
+      "cinematics": [
+        {
+          "cutscene_id": "GT-C06",
+          "title": "The Android 17 Hell Fusion",
+          "location": "Satan City Ruins & Hell's Gate",
+          "portraits_used": ["portrait_ssj4.png"],
+          "script_event": "Goku SSJ4 and Android 18 perform Dragon Fist (0x1A).",
+          "boss_battle": "Super 17 (Level 220, HP 100,000)"
+        }
+      ]
+    },
+    {
+      "saga_id": 4,
+      "chapter_banner": "CHAPTER 4: THE SEVEN SHADOW DRAGONS",
+      "episodes": "48 - 64",
+      "cinematics": [
+        {
+          "cutscene_id": "GT-C07",
+          "title": "The Cracked Dragon Balls",
+          "location": "Wastelands",
+          "portraits_used": ["portrait_ssj4.png"],
+          "script_event": "Black Smoke Shenron releases the 7 Shadow Dragons."
+        },
+        {
+          "cutscene_id": "GT-C08",
+          "title": "Omega Shenron Climax & Gogeta SSJ4 Fusion",
+          "location": "Crater Zero (map_crater_zero)",
+          "portraits_used": ["portrait_gogeta_ssj4.png"],
+          "script_event": "Goku SSJ4 and Vegeta SSJ4 fuse into Gogeta SSJ4 and fire Big Bang Kamehameha x100.",
+          "boss_battle": "Omega Shenron (Level 240, HP 120,000)",
+          "unlocks": "Form ID 0x1B (Gogeta SSJ4) + Skill 0x1C (Big Bang Kamehameha x100)"
+        },
+        {
+          "cutscene_id": "GT-C09",
+          "title": "Universal Spirit Bomb Epilogue",
+          "location": "Crater Zero (map_crater_zero)",
+          "portraits_used": ["portrait_base.png"],
+          "script_event": "Goku bids farewell to Earth, opening the path to AF (Zaiko) and Divine (Beerus/Whis) Postgame chapters."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+================================================================================
+  DRAGON BALL Z: BUU'S FURY — PLANETA DE BILLS, TIENDA DE WHIS & GOGETA SSJ4
+================================================================================
+UBICACIÓN DEL PORTAL:  Camino de la Serpiente (Snake Way) / Planeta Supremo.
+NPC DE ACCESO:         Whis (Ángel Asistente).
+MAPA EXPLORABLE:       Planeta de Bills (Beerus's Planet - Otro Mundo).
+
+--- DIÁLOGO DE ENTRADA CON WHIS (CAMINO DE LA SERPIENTE / OTRO MUNDO) ---
+
+Whis:   ¡Vaya, vaya! ¿Así que tú eres Son Goku? He sentido unas vibraciones muy 
+        interesantes procedentes de la Tierra tras la derrota de Majin Buu.
+Goku:   ¿Eh? ¿Quién eres tú? ¡No pareces un Kaiosama ni un habitante común del 
+        Otro Mundo! ¡Tu Ki es tan tranquilo que ni siquiera puedo medirlo!
+Whis:   Me llamo Whis. Soy el asistente y maestro del Señor Bills, el Dios de 
+        la Destrucción de nuestro Universo 7.
+Whis:   El Señor Bills ha despertado de su siesta fascinado por el rumor del 
+        "Super Saiyan Dios" y el nivel salvaje del Super Saiyan 4.
+Whis:   Si lo deseas, puedo transportarte a su santuario divino en el Otro Mundo. 
+        ¡Pero te advierto que al Señor Bills no le gusta que lo hagan esperar!
+Goku:   ¿¡Un Dios de la Destrucción!? ¡Eso suena increíble! ¡Llévame allá, Whis!
+        ¡Quiero ver qué tan fuerte es!
+
+[PORTAL DIVINO ACTIVADO -> VIAJE AL PLANETA DE BILLS EN EL OTRO MUNDO]
+
+--- DIÁLOGO EN EL PLANETA DE BILLS — TIENDA GOURMET Y ENTRENAMIENTO DE WHIS ---
+
+Whis:   Bienvenido al Santuario del Dios de la Destrucción. Aquí el tiempo y el 
+        Ki fluyen de una forma completamente distinta.
+Whis:   Antes de desafiar al Señor Bills, te sugiero abastecerte con nuestros 
+        manjares especiales del Otro Mundo en mi Tienda Divina.
+Whis:   ¡Una buena alimentación es el secreto del verdadero poder divino!
+
+[MENÚ DE TIENDA DIVINA DE WHIS — OBJETOS Y COMIDA NUEVA]
+  1. Pudín de Bills (Beerus's Pudding)      —  50,000 Zeni (100% HP/Ki + Defensa Divina)
+  2. Copa Helada de Whis (Whis's Sundae)    —  25,000 Zeni (10,000 HP + Cura estados)
+  3. Fruta del Árbol del Poder              — 100,000 Zeni (+5 STR permanente)
+  4. Sopa Gourmet del Otro Mundo            —  15,000 Zeni (+5,000 HP/Ki)
+
+--- DIÁLOGO DE COMBATE CONTRA BILLS (BEERUS) — JEFE DIVINO (LV. 250) ---
+
+Bills:  *Bostezo*... ¿Así que tú eres el Saiyajin que derrotó a Majin Buu y 
+        alcanzó esa evolución salvaje con pelaje rojo?
+Goku:   ¡Hola! Soy Goku. ¡Whis me dijo que eres el Dios de la Destrucción!
+Bills:  Espero que puedas ofrecerme un buen entretenimiento... y que hayas 
+        traído algún postre decente de la Tierra.
+Bills:  Si me aburro, destruiré este planeta, el Otro Mundo y tu diminuto 
+        planeta Tierra con un solo dedo. ¡Muéstrame todo el poder de tu 
+        Super Saiyan 4 o de esa fusión llamada Gogeta!
+Goku:   ¡No te decepcionaré, Señor Bills! ¡Allá voy con todo mi poder!
+
+[COMIENZA LA BATALLA DIVINA — BOSS: BEERUS (LV. 250 - HP: 150,000)]
+
+--- DIÁLOGO TRAS DERROTAR A ZAIKO / BILLS — DESBLOQUEO DE GOGETA SSJ4 ---
+
+Bills:  ¡Ja, ja, ja! Increíble... Has logrado resistir mi Energía de Destrucción.
+Whis:   ¡Maravilloso! Tu Super Saiyan 4 ha trascendido los límites mortales.
+Whis:   Como recompensa por haber superado la prueba divina y al híbrido Zaiko, 
+        te otorgo el secreto de la fusión definitiva: ¡Gogeta Super Saiyan 4!
+[Habilidad Desbloqueada: Fusión Gogeta SSJ4 (ID 0x1B) + Big Bang Kamehameha x100]
+================================================================================

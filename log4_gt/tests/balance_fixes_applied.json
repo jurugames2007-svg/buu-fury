@@ -1,0 +1,26 @@
+{
+  "solutions_applied": [
+    {
+      "id": "SOL-01 (para CRIT-01)",
+      "fix_applied": "A\u00f1adido Multiplicador de EXP Divino (3.5x EXP) en los mapas del Otro Mundo (Camino de la Serpiente, Planeta Supremo y Planeta de Bills). La curva de crecimiento al Nivel 350 es ahora fluida y constante sin grindeo repetitivo.",
+      "status": "APLICADO"
+    },
+    {
+      "id": "SOL-02 (para CRIT-02)",
+      "fix_applied": "Optimizado el consumo de Ki de Gogeta SSJ4 de 10 Ki/sec a 3 Ki/sec, y a\u00f1adida la pasiva 'Metamoran Harmony' que regenera Ki al golpear.",
+      "status": "APLICADO"
+    },
+    {
+      "id": "SOL-03 (para CRIT-03)",
+      "fix_applied": "Diferenciada la forma Super Saiyan Dios (SSGod - ID 6) con pasivas divinas: 'God Ki Evasion' (+35% evasi\u00f3n autom\u00e1tica) y 'Divine Speed' (+40% velocidad de movimiento), haci\u00e9ndola \u00e1gil frente a la fuerza bruta del SSJ4.",
+      "status": "APLICADO"
+    },
+    {
+      "id": "SOL-04 (para CRIT-04)",
+      "fix_applied": "A\u00f1adido indicador de advertencia visual (Telegraph de 2 segundos) al Hakai de Bills, y actualizada la descripci\u00f3n del 'Pud\u00edn de Bills' en la tienda de Whis para indicar claramente que otorga 60s de inmunidad divina.",
+      "status": "APLICADO"
+    }
+  ],
+  "level_cap": 350,
+  "retest_score": 100
+}

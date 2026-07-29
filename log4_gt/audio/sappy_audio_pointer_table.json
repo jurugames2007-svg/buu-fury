@@ -1,0 +1,84 @@
+{
+  "title": "Legacy of Goku 4 \u2014 100% GBA Sappy Sound Engine Audio Pointer Table",
+  "sappy_engine_range": "0x08A40000 - 0x08A41800",
+  "tracks": [
+    {
+      "id": "0x8A",
+      "name": "track_beerus_planet",
+      "title": "Divine God of Destruction Sanctuary Theme",
+      "bpm": 90,
+      "instruments": [
+        "Mystical Bell",
+        "Deep Sub Bass",
+        "Divine Choir"
+      ],
+      "offset": "0x08A40000",
+      "freq_hz": [
+        440,
+        523,
+        659,
+        784,
+        880
+      ]
+    },
+    {
+      "id": "0x8B",
+      "name": "track_dan_dan_gt",
+      "title": "Grand Tour Theme (Dan Dan Kokoro Hikareteku 16-bit)",
+      "bpm": 136,
+      "instruments": [
+        "Chiptune Lead",
+        "GBA Square Wave",
+        "Synth Brass"
+      ],
+      "offset": "0x08A40400",
+      "freq_hz": [
+        523,
+        587,
+        659,
+        698,
+        784,
+        880,
+        987,
+        1046
+      ]
+    },
+    {
+      "id": "0x8C",
+      "name": "track_af_zaiko_battle",
+      "title": "AF Boss Battle \u2014 Zaiko in Gohan's Forest",
+      "bpm": 160,
+      "instruments": [
+        "Heavy Electric Bass",
+        "Distorted Synth",
+        "Fast Drums"
+      ],
+      "offset": "0x08A40800",
+      "freq_hz": [
+        110,
+        146,
+        165,
+        220,
+        293,
+        330
+      ]
+    },
+    {
+      "id": "0x8D",
+      "name": "track_god_kamehameha_sfx",
+      "title": "God Kamehameha (0x1D) Divine Energy Blast SFX",
+      "bpm": 120,
+      "instruments": [
+        "White Noise Burst",
+        "Frequency Sweep"
+      ],
+      "offset": "0x08A40C00",
+      "freq_hz": [
+        880,
+        440,
+        220,
+        110
+      ]
+    }
+  ]
+}
