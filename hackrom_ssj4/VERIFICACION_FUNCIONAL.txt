@@ -1,0 +1,87 @@
+VERIFICACION FUNCIONAL SSJ4
+MD5: 2522839b3aaa0d392489d4edce26a3f7
+OK=74 WARN=3 ERR=0 VERDICT=FUNCTIONAL
+
+ERRORS:
+
+WARNINGS:
+  - Mid code 0x20000-0x3C0000: 286 bytes dif (0.0075%) — revisar
+  - 34 diffs menores fuera de zonas conocidas
+  - Si el jugador reorganizó skills y slot3 no es SS/SS4, se sobrescriben al hablar con NPC
+
+OK:
+  - Tamaño 8 MB correcto
+  - ROM modificada (1158 bytes distintos del original)
+  - Entry point intacto: 2e0000ea
+  - Nintendo logo + boot header intactos
+  - Título OK: b'DBZBUUSFURY\x00'
+  - Game code OK: BG3E (USA)
+  - Checksum header correcto: 0x84
+  - Maker code intacto
+  - Handler modificado (hook presente)
+  - Instr 1: ldr r3, [pc, #4]
+  - Instr 2: bx r3
+  - Cálculo PC-relative del pool CORRECTO
+  - Bit Thumb (bit0) presente
+  - Target dentro del espacio de direcciones ROM
+  - Cave dentro del archivo @ 0x3C2300
+  - Cave en región vacía del original (0 bytes no-vacíos)
+  - Cave: push {r0-r2} (preserva registros del caller)
+  - Prólogo original embebido en cave+0x24
+  - Prólogo colocado después de la lógica de skills
+  - Retorno a handler+10 presente
+  - bx r3 presente para retorno
+  - Apunta a RAM de skills de Goku (0x0300156C)
+  - ldr r0 carga correctamente 0x0300156C
+  - Otorga max_slots=4 (movs r1, #0x4)
+  - Otorga Instant Transmission (movs r1, #0xe)
+  - Otorga Kamehameha (movs r1, #0xf)
+  - Otorga Super Saiyan (movs r1, #0x14)
+  - Otorga Super Saiyan 4 (movs r1, #0x16)
+  - Check idempotente: cmp r1, #SS (0x14)
+  - Check idempotente: cmp r1, #SS4 (0x16)
+  - Ramas condicionales beq presentes (2)
+  - Código posterior al hook intacto (resume limpio)
+  - Los 10 bytes son 5 ops Thumb-16 completas (no se parte ningún BL)
+  - Form name = 'SS4 Goku'
+  - Skill name = 'Super Saiyan 4'
+  - Rank title = 'Super Saiyan 4'
+  - Sin overflow en post-form: 'Teen Gohan'
+  - Sin overflow en pre-form SS: 'SS Goku'
+  - Sin overflow en pre-form base: 'Goku'
+  - SS4 desc OK (77 chars): 'Press B to transform into Super Saiyan 4! King Kai'...
+  - SS desc OK (52 chars): 'Press B to transform into a Super Saiyan. Talk to '...
+  - Kaiosama desc OK (76 chars): 'Guardian of the North Galaxy. Talk to him to unloc'...
+  - Goku SS3/SS4: solo campo paleta (+4) modificado
+  - Goku SS3/SS4: palette @ ROM 0x7B8A00
+  - Goku SS3/SS4: palette con remap (no identidad)
+  - Goku SS3/SS4: índices 0-15 preservados (piel/contorno)
+  - Goku SS3/SS4: punteros de animación intactos
+  - Goku SS3/SS4 halo: solo campo paleta (+4) modificado
+  - Goku SS3/SS4 halo: palette @ ROM 0x7B8A00
+  - Goku SS3/SS4 halo: palette con remap (no identidad)
+  - Goku SS3/SS4 halo: índices 0-15 preservados (piel/contorno)
+  - Goku SS3/SS4 halo: punteros de animación intactos
+  - Encontrados 4 NPCs King Kai
+  - NPC 0x74CC8: diálogo ORIGINAL restaurado (texto OK)
+  - NPC 0x74F28: diálogo ORIGINAL restaurado (texto OK)
+  - NPC 0x74F50: diálogo ORIGINAL restaurado (texto OK)
+  - NPC 0x75290: diálogo ORIGINAL restaurado (texto OK)
+  - Vector/entry: idéntico al original
+  - Boot logo area: idéntico al original
+  - Early engine: idéntico al original
+  - Pre-handler: idéntico al original
+  - Post-handler: idéntico al original
+  - Graphics zone sample: idéntico al original
+  - Escenario New Game: otorga 4 skills
+  - Escenario ya-SS: idempotente (no pisa)
+  - Escenario ya-SS4: idempotente
+  - Tamaño potencia de 2 (OK para flasheo/emuladores)
+  - Archivo = tamaño lógico (8388608 bytes)
+  - Cave accesible vía espejo 0x08000000
+  - ROM/DBZ_Buus_Fury_SSJ4_HACK.gba (8388608 bytes)
+  - ROM/DBZ_Buus_Fury_ORIGINAL.gba (8388608 bytes)
+  - AUDIT_REPORT.txt (1672 bytes)
+  - reporte_hackrom.txt (1483 bytes)
+  - ZIP presente (12289455 bytes)
+

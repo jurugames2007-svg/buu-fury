@@ -1,0 +1,107 @@
+{
+  "title": "The Legacy of Goku 4 \u2014 Dragon Ball GT DLC",
+  "activation": "Talk to East Kai on Snake Way (first map of Other World)",
+  "forms": {
+    "0": "Base Goku (original)",
+    "1": "SSJ4 Goku GT (NEW slot, was GT stub)",
+    "3": "Super Saiyan (original)",
+    "5": "Super Saiyan 3 (original RESTORED)"
+  },
+  "power_order": [
+    "SSJ4",
+    "SSJ3",
+    "SSJ1",
+    "Base"
+  ],
+  "skills_granted": {
+    "0x0E": "Instant Transmission",
+    "0x0F": "Kamehameha",
+    "0x14": "Super Saiyan",
+    "0x15": "Super Saiyan 4 (marker / form 1 entry)"
+  },
+  "sagas": [
+    {
+      "name": "Grand Tour / Black Stars",
+      "eps": "1-16",
+      "maps": [
+        "Capsule Corp",
+        "Space Ship",
+        "Imecka",
+        "Monmaash",
+        "Gelbo",
+        "M2"
+      ],
+      "bosses": [
+        "Ledgic",
+        "Luud",
+        "Para Para Bros"
+      ],
+      "party": [
+        "Kid Goku",
+        "Trunks",
+        "Pan",
+        "Giru"
+      ]
+    },
+    {
+      "name": "Baby",
+      "eps": "17-40",
+      "maps": [
+        "M2 Lab",
+        "Earth Infected",
+        "Sugoroku",
+        "Sacred World",
+        "New Planet Plant"
+      ],
+      "bosses": [
+        "General Rilldo",
+        "Baby Vegeta",
+        "Baby Oozaru"
+      ],
+      "key": "SSJ4 unlock story beat"
+    },
+    {
+      "name": "Super 17",
+      "eps": "41-47",
+      "maps": [
+        "Hell",
+        "Satan City Ruins"
+      ],
+      "bosses": [
+        "Frieza Halo",
+        "Cell Halo",
+        "Super 17"
+      ],
+      "key": "Dragon Fist"
+    },
+    {
+      "name": "Shadow Dragons",
+      "eps": "48-64",
+      "maps": [
+        "Toxic Swamp",
+        "Ice Fair",
+        "Crater Zero"
+      ],
+      "bosses": [
+        "Seven Dragons",
+        "Omega Shenron"
+      ],
+      "key": "Gogeta SSJ4, Universal Spirit Bomb"
+    }
+  ],
+  "npc": {
+    "name": "East Kai",
+    "map": "Snakeway",
+    "type": 81,
+    "pos": [
+      140,
+      200
+    ]
+  },
+  "technical": {
+    "ss3_restored": true,
+    "ssj4_separate_slot": true,
+    "rom_size_mb": 16,
+    "policy": "additive"
+  }
+}

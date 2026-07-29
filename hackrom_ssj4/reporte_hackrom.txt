@@ -1,0 +1,41 @@
+================================================================================
+ DRAGON BALL Z: BUU'S FURY — SUPER SAIYAN 4 HACK
+================================================================================
+Base MD5: 3a74fce97f1ea2b28c2a50ec3df0acee
+Hack MD5: cd245a2800d06359cffdb3688614ef21
+Changes:  26
+
+QUÉ INCLUYE
+  • Forma "SS4 Goku" (antes SS3) con pelaje rojo estilo SSJ4
+  • Habilidad "Super Saiyan 4" (mejor que SS3)
+  • Kaiosama te da Super Saiyan + Super Saiyan 4 al hablar
+  • Portrait/form SS4 con paleta roja más llamativa que el SS3 dorado
+
+CÓMO JUGAR
+  1. Abre mGBA
+  2. Carga: hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_HACK.gba
+  3. New Game
+  4. Llega a King Kai / Planet of the Kais (Other World, inicio)
+  5. Habla con Kaiosama
+  6. Menú → Skills → equipa Super Saiyan y Super Saiyan 4
+  7. B = transformar (SS → SS4)
+
+OFFSETS
+  SS4 Goku name      0x583F6
+  Super Saiyan 4     0x6A544
+  Paleta SSJ4        0x7B8A00
+  Struct SS4         0x6AD510
+  Code cave          0x3C2300
+  Hook NPC handler   0x17DA2
+  Diálogo Kaiosama   0x7B8D10
+
+SKILLS
+  0x0E Instant Transmission | 0x0F Kamehameha
+  0x14 Super Saiyan         | 0x16 Super Saiyan 4
+
+NOTAS
+  • Sprites = geometría SS3 + paleta roja SSJ4 (estable, sin glitches de animación)
+  • El grant de skills ocurre al interactuar con NPCs (habla con Kaiosama)
+  • ROM original en la misma carpeta como backup
+
+================================================================================
