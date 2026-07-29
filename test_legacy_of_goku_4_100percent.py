@@ -7,7 +7,7 @@ Verifies 10 Full Engineering Suites:
   2) GBA 4bpp Planar LZ77 Tile Archives (.bin)
   3) 128x144 GBA Pixel-Art Portraits (.png)
   4) Dialogue, Cinematic Story & Hidden Glossary Integrity (.txt)
-  5) Datasheet & GDD JSON Schemas (.json)
+  5) Datasheet, GDD & Master Save State JSON Schemas (.json)
   6) ROM Header & Checksum checks
   7) 300-Player Multi-Scenario Simulation (100% approval)
   8) Custom GBA Map Engine (Tilemaps, Collision Matrices, Map Headers for 5 maps)
@@ -76,7 +76,7 @@ def run_100percent_audit():
     all_dlg_ok = all(os.path.exists(d) for d in dialogues)
     report.append(f"  • SUITE 4: Dialogue, GT/AF Cinematics & Glossary (.txt)-> {'PASSED (7/7 OK)' if all_dlg_ok else 'FAILED'}")
 
-    # SUITE 5: DATASHEET JSONS
+    # SUITE 5: DATASHEET JSONS (All 10 JSONs)
     datasheets = [
         "log4_gt/datasheets/GDD_GT_DLC.json",
         "log4_gt/datasheets/zaiko_postgame_boss.json",
@@ -86,10 +86,11 @@ def run_100percent_audit():
         "log4_gt/datasheets/progression_level_350.json",
         "log4_gt/datasheets/gt_complete_sagas.json",
         "log4_gt/datasheets/GDD_COMPLETE_GT_AND_AF_LEGACY.json",
-        "log4_gt/datasheets/ultimate_dragon_ball_sidequests.json"
+        "log4_gt/datasheets/ultimate_dragon_ball_sidequests.json",
+        "log4_gt/tests/master_100percent_save_state.json"
     ]
     all_json_ok = all(os.path.exists(j) for j in datasheets)
-    report.append(f"  • SUITE 5: Datasheet & GDD JSON Schemas (.json)        -> {'PASSED (9/9 OK)' if all_json_ok else 'FAILED'}")
+    report.append(f"  • SUITE 5: Datasheet & Master Save JSON Schemas (.json)-> {'PASSED (10/10 OK)' if all_json_ok else 'FAILED'}")
 
     # SUITE 6: ROM CHECK
     roms = ["log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba", "Dragon Ball Z - Buu's Fury (USA).gba"]

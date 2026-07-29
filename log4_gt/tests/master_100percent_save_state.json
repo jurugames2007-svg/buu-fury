@@ -1,0 +1,115 @@
+{
+  "title": "Dragon Ball Z: The Legacy of Goku 4 \u2014 Master 100% Save & RAM State",
+  "level_cap_status": "MAX (Level 350)",
+  "party_members": [
+    {
+      "name": "Goku",
+      "level": 350,
+      "hp": 55000,
+      "ki": 5000,
+      "unlocked_forms": [
+        0,
+        3,
+        5,
+        1,
+        6,
+        27
+      ]
+    },
+    {
+      "name": "Vegeta",
+      "level": 350,
+      "hp": 54000,
+      "ki": 4900,
+      "unlocked_forms": [
+        0,
+        3,
+        4,
+        1,
+        28,
+        27
+      ]
+    },
+    {
+      "name": "Gohan M\u00edstico",
+      "level": 350,
+      "hp": 56000,
+      "ki": 4800,
+      "unlocked_forms": [
+        0,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "Pan",
+      "level": 350,
+      "hp": 48000,
+      "ki": 4500,
+      "assist": "Giru Active"
+    },
+    {
+      "name": "Trunks",
+      "level": 350,
+      "hp": 50000,
+      "ki": 4600,
+      "unlocked_forms": [
+        0,
+        3
+      ]
+    },
+    {
+      "name": "Majuub",
+      "level": 350,
+      "hp": 53000,
+      "ki": 4950,
+      "unlocked_forms": [
+        0,
+        12
+      ]
+    }
+  ],
+  "unlocked_skills": {
+    "0x0E": "Instant Transmission (Goku)",
+    "0x0F": "Kamehameha x10 (Goku SSJ4)",
+    "0x15": "Super Saiyan 4 (Form ID 1)",
+    "0x1A": "Dragon Fist (Goku SSJ4)",
+    "0x1B": "Fusi\u00f3n Gogeta SSJ4",
+    "0x1C": "Big Bang Kamehameha x100 (Gogeta SSJ4)",
+    "0x1D": "God Kamehameha (Goku SSGod)",
+    "0x1E": "100x Big Bang Kamehameha Final (Gogeta SSJ5)"
+  },
+  "inventory": {
+    "zeni": 999999,
+    "relics_owned": [
+      "Generador de Rayos Blutz",
+      "Espejo del Vac\u00edo",
+      "N\u00facleo Gen\u00e9tico de Zaiko",
+      "Esfera del Drag\u00f3n Definitiva",
+      "Cintur\u00f3n del Campe\u00f3n",
+      "Halo del M\u00e1s All\u00e1"
+    ],
+    "gourmet_food": [
+      {
+        "item": "Pud\u00edn de Bills",
+        "quantity": 99
+      },
+      {
+        "item": "Copa Helada de Whis",
+        "quantity": 99
+      },
+      {
+        "item": "Fruta del \u00c1rbol del Poder",
+        "quantity": 99
+      }
+    ]
+  },
+  "side_quests_completed": {
+    "gt_imecka_ledgic_melee_only": true,
+    "gt_m2_factory_press_30s": true,
+    "af_zaiko_zsword_seal_80ki": true,
+    "af_angel_z_holy_light_mirror": true,
+    "af_evil_goku_7_light_circles": true
+  },
+  "epilogue_status": "TRUE AF & DIVINE EPILOGUE UNLOCKED (100% COMPLETE)"
+}
