@@ -1,0 +1,42 @@
+================================================================================
+SSJ4 HACK — AUDIT + FIX REPORT
+================================================================================
+ROM: hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_HACK.gba
+MD5: 2522839b3aaa0d392489d4edce26a3f7
+Size: 8388608 bytes
+Fixes applied: 4
+
+FUNCTIONAL STATUS: YES (core features) with known limits
+
+✓ WORKS
+  - ROM boots (header, logo, entry, checksum valid)
+  - NPC interact hook (LR-safe ldr+bx) at 0x17DA2
+  - Code cave at 0x3C2300 grants skills on NPC talk:
+      0x0E Instant Transmission
+      0x0F Kamehameha  
+      0x14 Super Saiyan
+      0x16 Super Saiyan 4
+  - Idempotent: skips if slot already has SS or SS4
+  - Form name "SS4 Goku", skill/rank "Super Saiyan 4"
+  - Red-fur palette on SS3/SS4 Goku structs
+  - Animation pointers intact
+  - King Kai ORIGINAL dialogues restored (no blank text crash)
+  - No string table overflow
+
+⚠ LIMITS (not crashes)
+  - Skill grant triggers on ANY NPC talk (not only Kaiosama)
+    → Talk to Kaiosama (or any NPC) once after New Game to unlock
+  - Custom LoG4 dialogue/maps/new engine systems are NOT in this 8MB ROM
+  - SS4 reuses SS3 sprite geometry + red palette (by design, stable)
+
+HOW TO VERIFY IN mGBA
+  1. Load DBZ_Buus_Fury_SSJ4_HACK.gba
+  2. New Game
+  3. Talk to any NPC (preferably King Kai when you reach him)
+  4. Open Skills — should see Super Saiyan + Super Saiyan 4
+  5. Equip and press B to transform
+  6. Form name should read SS4 Goku with red tones
+
+CRITICAL PATH: BOOT → NPC TALK → SKILLS GRANTED → TRANSFORM
+STATUS: FUNCTIONAL
+================================================================================

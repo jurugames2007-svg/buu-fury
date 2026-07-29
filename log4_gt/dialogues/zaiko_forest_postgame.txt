@@ -1,0 +1,44 @@
+================================================================================
+  DRAGON BALL Z: BUU'S FURY — POSTGAME ZAIKO AF BOSS & SSJ4 EAST KAI DLC
+================================================================================
+NPC ENCUENTRO: ZAIKO (XICOR) — POST-GAME SUPER BOSS
+UBICACIÓN:     Bosque del Distrito 439 (fuera de la casa de Gohan Adulto, hacia
+               la zona boscosa profunda de la izquierda en el mapa inicial de Gohan).
+REQUISITO:     Haber derrotado a Kid Buu (Post-Game principal) o desbloqueado GT/AF
+               tras superar la saga de Majin Buu.
+
+--- DIÁLOGO DE ENCUENTRO CON ZAIKO (BOSQUE DE GOHAN ADULTO) ---
+
+[Gohan Adulto entra al claro del bosque profundo fuera de su casa]
+
+Zaiko:   ¿Así que este es el famoso planeta Tierra... y tú eres el hijo del 
+         guerrero más poderoso, Son Goku?
+Gohan:   ¿Quién eres tú? ¡Tu Ki es gigantesco... es increíblemente pesado! 
+         ¡Jamás había sentido una energía tan abrumadora, ni siquiera con Kid Buu!
+Zaiko:   Mi nombre es Zaiko. Llevo en mis venas la sangre de tu padre Goku y 
+         el poder supremo de los Kaioshin del Reino Devastado.
+Zaiko:   Kid Buu no era más que un monstruo irracional y primitivo... 
+         ¡Mi poder está en una dimensión muy superior a cualquier Majin!
+Gohan:   ¡Ese cabello plateado... esas espinas en el rostro...! ¿¡Un Super Saiyan!? 
+         ¡No dejaré que destruyas la paz por la que mi padre se sacrificó!
+Zaiko:   ¡Muéstrame el verdadero poder de los Saiyajin de la Tierra! 
+         ¡Si no puedes superarme, reduciré este bosque y el planeta entero a cenizas!
+Zaiko:   ¡Prepárate, Gohan! ¡Ni siquiera el Super Saiyan 3 de Goku podría 
+         hacerme un rasguño!
+
+[COMIENZA LA BATALLA POST-GAME — BOSS ZAIKO (LV. 99+)]
+
+--- DIÁLOGO DE KAIOSAMA DEL ESTE (CAMINO DE LA SERPIENTE / OTHER WORLD) ---
+
+East Kai: ¡Detente, Saiyajin! Soy el Kaiosama del Este.
+East Kai: El Kaiosama del Norte entrena el cuerpo, pero yo custodio el LEGADO 
+          oculto de los Saiyajin.
+East Kai: Más allá del Camino de la Serpiente aguardan amenazas que empequeñecen 
+          a Kid Buu: Baby, Super 17, los Dragones Oscuros... ¡y el misterio de Zaiko!
+East Kai: ¡Toma el poder del Super Saiyan 4! ¡Un nivel salvaje más allá del 
+          Super Saiyan 3!
+[Desbloqueado sendero Super Saiyan 4. Forma SSJ4 (ID 1) activa. Habilidades otorgadas.]
+East Kai: Presiona B en el menú de Skills. Tu jerarquía ahora es:
+          SS4 (ID 1) > SS3 (ID 5, original) > SS1 (ID 3) > Base (ID 0).
+East Kai: ¡Demuestra el orgullo de nuestra galaxia frente a los peligros del postgame!
+================================================================================

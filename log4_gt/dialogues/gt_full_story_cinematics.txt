@@ -1,0 +1,105 @@
+================================================================================
+  DRAGON BALL Z: THE LEGACY OF GOKU 4 — GUION CINEMÁTICO COMPLETO DE GT
+================================================================================
+ESTILO DE NARRACIÓN:   Cinemáticas in-engine estilo Webfoot ("Buu's Fury").
+FORMATO EN PANTALLA:   [BANNER DE CAPÍTULO] -> [PORTRAIT 128x144] -> [CAJA DE DIÁLOGO].
+SAGAS INCLUIDAS:       100% de Dragon Ball GT (Sagas 1 a 4 + Post-Game AF/Dioses).
+
+================================================================================
+  CAPÍTULO 1: SAGA GRAND TOUR (LAS ESFERAS DE ESTRELLA NEGRA) — EPS. 1–16
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 1: THE BLACK STAR DRAGON BALLS"
+[ESCENARIO]:           El Templo Sagrado de Kami-Sama (Lookout).
+
+[CINEMÁTICA 1: EL DESEO ACCIDENTAL DE PILAF]
+Pilaf:        ¡Por fin! ¡Después de tantos años he reunido las Esferas del Dragón 
+              de Estrella Negra que creó el Kami-Sama original!
+Goku (Base):  ¿Eh? ¿Pilaf? ¿Qué estás haciendo aquí arriba en el Templo?
+Pilaf:        ¡Goku! ¡Maldita sea, siempre arruinando mis planes! ¡Ojalá fueras 
+              un niño pequeño otra vez para poder aplastarte fácilmente!
+Shenron Rojo: ¡TU DESEO HA SIDO CONCEDIDO!
+[EFECTO DE DESTELLO ROJO EN PANTALLA — GOKU SE TRANSFORMA EN NIÑO]
+Kaiosama:     ¡Goku! ¡Las Esferas de Estrella Negra se han dispersado por toda 
+              la galaxia! ¡Si no las reúnen en un año, la Tierra explotará!
+
+[CINEMÁTICA 2: DESPEGUE DE LA NAVE ESPACIAL — CORPORACIÓN CÁPSULA]
+Trunks:       La nave espacial está lista, Goku. Volaremos por el Universo 7.
+Pan:          ¡Abuelito! ¡Yo también voy con ustedes! ¡He reprogramado el piloto 
+              automático, así que despeguemos ahora mismo!
+[EVENTO EN MAPA: Despegue hacia el espacio exterior. Miembros del grupo: Kid Goku, Trunks, Pan, Giru].
+
+[CINEMÁTICA 3: MERCADO DEL PLANETA IMECKA (map_imecka) & JEFE LEDGIC]
+Giru:         ¡Peligro! ¡Peligro! ¡Guardias imperiales del tirano Don Kee!
+Ledgic:       Soy Ledgic, el guardaespaldas de Don Kee. Veo que tienes honor, 
+              Saiyajin... ¡Muéstrame tu verdadero poder en combate!
+[BOSS BATTLE: LEDGIC — Nivel 160 — HP: 45,000] -> [VICTORIA: Obtención Esfera 1 Estrella].
+
+================================================================================
+  CAPÍTULO 2: SAGA DE BABY (EL VENGADOR TSUFURU) — EPS. 17–40
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 2: BABY, THE TUFFLE AVENGER"
+[ESCENARIO]:           La Tierra Infectada & Nuevo Planeta Plant (map_tuffle_planet).
+
+[CINEMÁTICA 4: REGRESO A UNA TIERRA POSEÍDA]
+Pan:          ¡Abuelito, regresamos a la Tierra con las 7 Esferas! Pero... 
+              ¿por qué el cielo está oscuro y todos actúan tan extraño?
+Baby-Vegeta:  ¡Bienvenido a casa, Kakaroto! Soy Baby, el último superviviente 
+              de la raza Tsufuru. ¡He tomado el cuerpo de Vegeta y de toda la 
+              humanidad! ¡Tu preciado planeta ahora me pertenece!
+
+[CINEMÁTICA 5: EL DESPERTAR DEL SUPER SAIYAN 4 EN EL PLANETA PLANT]
+[ESCENARIO]:  Nuevo Planeta Plant (map_tuffle_planet).
+Goku Oozaru:  ¡¡ROAAAAR!! [Goku transformado en Oozaru Dorado pierde el control].
+Pan:          ¡Abuelito Goku, por favor reacciona! ¡Tú eres el héroe de la Tierra!
+[PORTRAIT: Goku Oozaru -> Destello Dorado -> PORTRAIT: Goku SSJ4 (portrait_ssj4.png)]
+Goku SSJ4:    Gracias, Pan... Tu voz me devolvió la razón.
+Goku SSJ4:    Baby... Has lastimado a mi familia y a mis amigos. ¡Esta nueva 
+              forma es el Super Saiyan 4, y será tu fin!
+[BOSS BATTLE: BABY VEGETA OOZARU DORADO — Nivel 200 — HP: 85,000] -> [VICTORIA].
+
+================================================================================
+  CAPÍTULO 3: SAGA DE SUPER 17 (LA INVASIÓN DEL INFIERNO) — EPS. 41–47
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 3: THE ULTIMATE ANDROID, SUPER 17"
+[ESCENARIO]:           Ruinas de Ciudad Satán & Puerta del Infierno.
+
+[CINEMÁTICA 6: LA FUSIÓN DE LOS DOS ANDROIDES 17]
+Dr. Myu:      ¡El portal entre el Infierno y la Tierra se ha abierto!
+Super 17:     Yo soy el Androide definitivo... Super 17. Ninguno de sus ataques 
+              de Ki puede dañarme; ¡todo lo que lanzan es absorbido por mi cuerpo!
+Goku SSJ4:    ¿Conque absorbes energía? ¡Entonces tendré que atravesarte con 
+              un ataque físico supremo! ¡Androide 18, cúbreme!
+[CINEMÁTICA DE ATAQUE: GOKU SSJ4 EJECUTA EL PUÑO DEL DRAGÓN (DRAGON FIST - 0x1A)]
+[BOSS BATTLE: SUPER 17 — Nivel 220 — HP: 100,000] -> [VICTORIA].
+
+================================================================================
+  CAPÍTULO 4: SAGA DE LOS DRAGONES OSCUROS (SHADOW DRAGONS) — EPS. 48–64
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 4: THE SEVEN SHADOW DRAGONS"
+[ESCENARIO]:           Cráter Cero (map_crater_zero) & Páramos Devastados.
+
+[CINEMÁTICA 7: EL NACIMIENTO DE LOS DRAGONES OSCUROS]
+Shenron Negro: ¡Mortales arrogantes! ¡Han abusado de las Esferas del Dragón 
+               durante décadas! ¡Cada deseo ha creado un Dragón Oscuro!
+Goku SSJ4:     ¡Fue culpa nuestra por depender tanto de las Esferas! ¡Yo mismo 
+               me encargaré de derrotar a los 7 Dragones!
+
+[CINEMÁTICA 8: EL CLÍMAX CONTRA OMEGA SHENRON & FUSIÓN GOGETA SSJ4]
+[ESCENARIO]:   Cráter Cero (map_crater_zero).
+Omega Shenron: ¡He absorbido las 7 Esferas del Dragón! ¡Soy la destrucción absoluta!
+Vegeta SSJ4:   ¡Kakaroto! ¡No nos queda otra opción! ¡Hagamos la Fusión Metamoran!
+Goku & Vegeta: ¡¡FUSIÓN... ¡¡HA!!
+[PORTRAIT: Gogeta SSJ4 (portrait_gogeta_ssj4.png) APARECE EN PANTALLA]
+Gogeta SSJ4:   No soy Goku ni tampoco Vegeta... ¡Soy el encargado de acabar contigo!
+Gogeta SSJ4:   ¡Te mostraré un poder que supera todos los límites de la galaxia!
+               ¡¡BIG BANG KAMEHAMEHA X100!!
+[BOSS BATTLE: OMEGA SHENRON — Nivel 240 — HP: 120,000] -> [DESBLOQUEO GOGETA SSJ4].
+
+[CINEMÁTICA 9: LA GENKIDAMA UNIVERSAL Y DESPEDIDA DE GOKU (EPÍLOGO GT)]
+Goku:          ¡Universo entero, préstenme su energía una última vez!
+[CINEMÁTICA FINAL: Omega Shenron es purificado. Shenron original aparece].
+Shenron:       Es hora de irnos, Goku.
+Goku:          Sí... ¿Sabes, Pan? El verdadero poder siempre estuvo en el corazón 
+               de las personas. ¡Adiós a todos!
+[FIN DE LA CAMPAÑA GT -> INICIO DEL POST-GAME: AF (ZAIKO) & OTRO MUNDO (BILLS/WHIS)]
+================================================================================

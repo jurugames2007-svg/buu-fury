@@ -1,0 +1,50 @@
+{
+  "title": "Legacy of Goku 4 — Ultimate Dragon Ball Side Quest Requirements & Subplots",
+  "description": "Exact side-quest requirements across GT and AF sagas to unlock the Ultimate Dragon Ball (Esfera del Dragón Definitiva) and the true Gogeta SSJ5 epilogue.",
+  "subplots": [
+    {
+      "subplot_id": 1,
+      "name": "El Fragmento del Dragón Negro (Imecka)",
+      "saga": "Grand Tour / Black Star Dragon Balls",
+      "location": "Planeta Imecka — Palacio de Don Kee",
+      "requirement": "Defeat Ledgic using only physical melee attacks (no Ki blasts spent during the fight).",
+      "reward": "Fragmento de Esfera 1 (Black Star Shard)"
+    },
+    {
+      "subplot_id": 2,
+      "name": "El Núcleo de Energía Negativa (Planeta M2)",
+      "saga": "Baby / Machine Mutant Saga",
+      "location": "Planeta M2 — Pistas de Ensamblaje",
+      "requirement": "Complete the conveyor belt hydraulic press switch puzzle in under 30 seconds without taking Stun damage.",
+      "reward": "Fragmento de Esfera 2 (Negative Energy Core)"
+    },
+    {
+      "subplot_id": 3,
+      "name": "El Altar del Reino Kaioshin Devastado (Saga Zaiko)",
+      "saga": "The AF Chronicles — Saga de Zaiko",
+      "location": "Planeta Sagrado Corrompido",
+      "requirement": "Activate all 3 Z-Sword Seal pedestals by sacrificing 80% current Ki while controlling Goku Super Saiyan 5.",
+      "reward": "Fragmento de Esfera 3 (Kaioshin Sacred Seal)"
+    },
+    {
+      "subplot_id": 4,
+      "name": "El Reflejo de la Esfera Sagrada (Saga Ángel Z)",
+      "saga": "The AF Chronicles — Saga de Ángel Z",
+      "location": "El Vacío Absoluto — El Templo Invertido",
+      "requirement": "Equip the 'Espejo del Vacío' relic and reflect Angel Z's Holy Light beam onto the Celestial Altar switch.",
+      "reward": "Fragmento de Esfera 4 (Holy Light Crystal)"
+    },
+    {
+      "subplot_id": 5,
+      "name": "La Purificación del Caos (Saga Evil Goku)",
+      "saga": "The AF Chronicles — Saga de Evil Goku",
+      "location": "La Tierra del Caos Absoluto",
+      "requirement": "Visit all 7 fallen Z-Warrior 'Light Circles' (Piccolo, Krillin, Yamcha, Tien, Chiaotzu, Goten, Trunks) across the ruined overworld without letting your Ki hit 0.",
+      "reward": "Fragmento de Esfera 5 (Z-Warrior Soul Cluster)"
+    }
+  ],
+  "ultimate_reward": {
+    "item": "Esfera del Dragón Definitiva (Ultimate Dragon Ball)",
+    "effect": "Unlocks Skill ID 0x1E (100x Big Bang Kamehameha Final for Gogeta SSJ5) and triggers the True AF Epilogue Cinematic."
+  }
+}

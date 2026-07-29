@@ -1,0 +1,184 @@
+{
+  "title": "The Legacy of Goku 4 \u2014 Dragon Ball GT, AF & God of Destruction DLC",
+  "max_level": 350,
+  "activation": "Talk to East Kai on Snake Way (first map of Other World)",
+  "postgame_activation": "Defeat Kid Buu, then travel to East District 439 Forest (outside Adult Gohan's house)",
+  "beerus_planet_activation": "Speak with Whis on Snake Way / Planet of the Kais to enter portal to Beerus's Planet",
+  "forms": {
+    "0": "Base Goku (original)",
+    "1": "SSJ4 Goku GT (NEW slot, was GT stub)",
+    "3": "Super Saiyan (original)",
+    "5": "Super Saiyan 3 (original RESTORED)",
+    "6": "Super Saiyan God (SSGod / Divine slot - Unlocked via Whis training after Beerus)",
+    "27": "Gogeta Super Saiyan 4 (Unlocked vs Omega Shenron in GT Climax)"
+  },
+  "power_order": [
+    "Gogeta SSJ4",
+    "SSGod",
+    "SSJ4",
+    "SSJ3",
+    "SSJ1",
+    "Base"
+  ],
+  "skills_granted": {
+    "0x0E": "Instant Transmission",
+    "0x0F": "Kamehameha",
+    "0x14": "Super Saiyan",
+    "0x15": "Super Saiyan 4 (marker / form 1 entry)",
+    "0x1B": "Fusión Gogeta SSJ4 (Unlocked vs Omega Shenron)",
+    "0x1C": "Big Bang Kamehameha x100",
+    "0x1D": "God Kamehameha (Unlocked via Whis SSGod Training)"
+  },
+  "sagas": [
+    {
+      "name": "Grand Tour / Black Stars",
+      "eps": "1-16",
+      "maps": [
+        "Capsule Corp",
+        "Space Ship",
+        "Imecka",
+        "Monmaash",
+        "Gelbo",
+        "M2"
+      ],
+      "bosses": [
+        "Ledgic",
+        "Luud",
+        "Para Para Bros"
+      ],
+      "party": [
+        "Kid Goku",
+        "Trunks",
+        "Pan",
+        "Giru"
+      ]
+    },
+    {
+      "name": "Baby",
+      "eps": "17-40",
+      "maps": [
+        "M2 Lab",
+        "Earth Infected",
+        "Sugoroku",
+        "Sacred World",
+        "New Planet Plant"
+      ],
+      "bosses": [
+        "General Rilldo",
+        "Baby Vegeta",
+        "Baby Oozaru"
+      ],
+      "key": "SSJ4 unlock story beat"
+    },
+    {
+      "name": "Super 17",
+      "eps": "41-47",
+      "maps": [
+        "Hell",
+        "Satan City Ruins"
+      ],
+      "bosses": [
+        "Frieza Halo",
+        "Cell Halo",
+        "Super 17"
+      ],
+      "key": "Dragon Fist"
+    },
+    {
+      "name": "Shadow Dragons",
+      "eps": "48-64",
+      "maps": [
+        "Toxic Swamp",
+        "Ice Fair",
+        "Crater Zero"
+      ],
+      "bosses": [
+        "Seven Dragons",
+        "Omega Shenron (Level 240, HP 120,000)"
+      ],
+      "key": "Unlock Gogeta SSJ4 (Form 0x1B) + Big Bang Kamehameha x100"
+    },
+    {
+      "name": "Dragon Ball AF — Post-Kid Buu Secret Encounter",
+      "eps": "Postgame 65+",
+      "maps": [
+        "East District 439 Forest (Outside Adult Gohan's House)"
+      ],
+      "bosses": [
+        "Zaiko / Xicor (Kaioshin Hybrid Super Boss - Level 280, HP 180,000)"
+      ],
+      "key": "Drops Zaiko's Earring (Reliquia AF)"
+    },
+    {
+      "name": "Saga del Otro Mundo — Planeta de Bills, Tienda de Whis y Entrenamiento SSGod",
+      "eps": "Postgame Divine Trial",
+      "maps": [
+        "Planeta de Bills (Beerus's Planet in Other World)"
+      ],
+      "bosses": [
+        "Beerus / Bills (God of Destruction - LV 320 - HP 250,000)",
+        "Whis (Angel Master Trial - LV 350 - HP 350,000)"
+      ],
+      "shops": [
+        "Tienda Divina de Whis (Pudín de Bills, Copa Helada de Whis, Fruta del Árbol del Poder)"
+      ],
+      "key": "Defeating Beerus opens Whis training to achieve Super Saiyan God (SSGod / Form 6)"
+    }
+  ],
+  "npc": {
+    "name": "East Kai",
+    "map": "Snakeway",
+    "type": 81,
+    "pos": [
+      140,
+      200
+    ]
+  },
+  "postgame_bosses": {
+    "omega_shenron": {
+      "name": "Omega Shenron",
+      "map": "Crater Zero (GT Climax)",
+      "level": 240,
+      "hp": 120000,
+      "unlock": "Gogeta SSJ4 Fusion (Form 0x1B)"
+    },
+    "zaiko_af": {
+      "name": "Zaiko (Xicor)",
+      "map": "East District 439 Forest",
+      "level": 280,
+      "hp": 180000,
+      "strength": 380,
+      "defense": 340,
+      "comparison_vs_kidbuu": "5.6x stronger HP than Kid Buu (Vanilla Kid Buu: 32,000 HP, 150 STR)"
+    },
+    "beerus_god": {
+      "name": "Beerus (Bills)",
+      "map": "Planeta de Bills (Other World)",
+      "level": 320,
+      "hp": 250000,
+      "strength": 480,
+      "defense": 420,
+      "comparison_vs_kidbuu": "7.8x stronger HP than Kid Buu. Ultimate Divine Boss."
+    },
+    "whis_angel": {
+      "name": "Whis (Master Trial)",
+      "map": "Planeta de Bills (Other World)",
+      "level": 350,
+      "hp": 350000,
+      "strength": 550,
+      "defense": 500,
+      "unlock": "Super Saiyan God (SSGod / Form 6)"
+    }
+  },
+  "technical": {
+    "ss3_restored": true,
+    "ssj4_separate_slot": true,
+    "ssj_god_divine_slot": true,
+    "zaiko_af_postgame_boss": true,
+    "beerus_planet_otherworld": true,
+    "gogeta_ssj4_fusion_omega": true,
+    "level_cap_350": true,
+    "rom_size_mb": 16,
+    "policy": "additive"
+  }
+}

@@ -1,0 +1,26 @@
+================================================================================
+  DRAGON BALL Z: BUU'S FURY — CLÍMAX DRAGON BALL GT (OMEGA SHENRON & GOGETA)
+================================================================================
+UBICACIÓN:     Cráter Cero (Crater Zero / Zona Final de la Saga de Dragones Oscuros).
+JEFE CLÍMAX:   Omega Shenron (Omega Shenron - LV. 240).
+DESBLOQUEO:    Fusión Gogeta Super Saiyan 4 (Forma 0x1B).
+
+--- DIÁLOGO DE CLÍMAX CONTRA OMEGA SHENRON ---
+
+Omega Shenron: ¡Soy la manifestación de toda la energía negativa acumulada por 
+               las Esferas del Dragón! ¡Ni siquiera dos Super Saiyan 4 podrán 
+               detener mi destrucción total!
+Vegeta:        ¡Kakaroto! ¡No nos queda otra opción! ¡Usemos la técnica de 
+               Fusión Metamoran en nuestra forma Super Saiyan 4!
+Goku:          ¡De acuerdo, Vegeta! ¡Unamos nuestros poderes en un solo guerrero 
+               para acabar con esta amenaza!
+Goku & Vegeta: ¡¡FUSIÓN... ¡¡HA!!
+
+[DESBLOQUEADA FORMA DEFINITIVA: GOGETA SUPER SAIYAN 4 (Form ID 0x1B)]
+[DESBLOQUEADA HABILIDAD: BIG BANG KAMEHAMEHA X100 (Skill ID 0x1C)]
+
+Gogeta SSJ4:   No soy Goku ni tampoco Vegeta... ¡Soy el encargado de acabar 
+               contigo, Omega Shenron!
+Gogeta SSJ4:   ¡Te mostraré el poder máximo que supera todos los límites de 
+               la galaxia! ¡Prepárate para recibir el Big Bang Kamehameha x100!
+================================================================================

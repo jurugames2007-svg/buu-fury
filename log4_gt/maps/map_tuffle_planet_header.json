@@ -1,0 +1,29 @@
+{
+  "map_id": "map_tuffle_planet",
+  "name": "Nuevo Planeta Plant (Baby Saga Arena)",
+  "dimensions": {
+    "width_tiles": 64,
+    "height_tiles": 64
+  },
+  "tileset_offset": "0x08A00000",
+  "palette_offset": "0x08A10000",
+  "tilemap_file": "map_tuffle_planet.bin",
+  "collision_file": "map_tuffle_planet_collision.bin",
+  "preview_image": "map_tuffle_planet_preview.png",
+  "music_track_id": 139,
+  "npcs": [
+    {
+      "name": "Omega Shenron",
+      "type": 96,
+      "pos_x": 32,
+      "pos_y": 32
+    }
+  ],
+  "triggers": [
+    {
+      "type": "portal",
+      "target_map": "Snakeway",
+      "zone_y": 63
+    }
+  ]
+}

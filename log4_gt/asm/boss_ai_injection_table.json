@@ -1,0 +1,38 @@
+{
+  "title": "Legacy of Goku 4 \u2014 100% ARM/Thumb Boss AI Injection Table",
+  "code_cave_range": "0x083C2400 - 0x083C3000",
+  "routines": [
+    {
+      "name": "Beerus 3-Phase God of Destruction AI",
+      "source_file": "ai_beerus_boss.s",
+      "binary_payload": "ai_beerus_boss.bin",
+      "injection_offset": "0x083C2400",
+      "hook_table_entry": "0x0807E120",
+      "size_bytes": 68
+    },
+    {
+      "name": "Omega Shenron GT Climax AI",
+      "source_file": "ai_omega_shenron.s",
+      "binary_payload": "ai_omega_shenron.bin",
+      "injection_offset": "0x083C2480",
+      "hook_table_entry": "0x0807E140",
+      "size_bytes": 18
+    },
+    {
+      "name": "Zaiko AF High-Speed Afterimage AI",
+      "source_file": "ai_zaiko_boss.s",
+      "binary_payload": "ai_zaiko_boss.bin",
+      "injection_offset": "0x083C2500",
+      "hook_table_entry": "0x0807E160",
+      "size_bytes": 16
+    },
+    {
+      "name": "Whis Divine Master Trial Ultra Instinct AI",
+      "source_file": "ai_whis_trial.s",
+      "binary_payload": "ai_whis_trial.bin",
+      "injection_offset": "0x083C2580",
+      "hook_table_entry": "0x0807E180",
+      "size_bytes": 28
+    }
+  ]
+}

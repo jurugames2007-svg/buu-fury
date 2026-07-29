@@ -1,0 +1,52 @@
+{
+  "shop_name": "Tienda Divina de Whis (Whis's Divine Shop)",
+  "location": "Planeta de Bills (Other World — accesible por portal en Snake Way)",
+  "npc_merchant": "Whis (Ángel Asistente)",
+  "currency": "Zeni",
+  "new_items": [
+    {
+      "item_id": "0xA1",
+      "name": "Pudín de Bills (Beerus's Pudding)",
+      "type": "Gourmet Food / Consumable",
+      "price_zeni": 50000,
+      "effect": "Restores 100% HP and 100% Ki, plus grants temporary God Ki defense buff (-50% damage taken for 60 seconds).",
+      "icon": "ui_icons/item_beerus_pudding.png",
+      "flavor_text": "El postre favorito del Dios de la Destrucción. ¡Una cucharada te llena de energía divina!"
+    },
+    {
+      "item_id": "0xA2",
+      "name": "Copa Helada de Whis (Whis's Sundae)",
+      "type": "Gourmet Food / Consumable",
+      "price_zeni": 25000,
+      "effect": "Restores 10,000 HP and cures all status ailments (poison, slow, stun).",
+      "icon": "ui_icons/item_whis_sundae.png",
+      "flavor_text": "Helado artesanal del Otro Mundo preparado por Whis con frutas galácticas."
+    },
+    {
+      "item_id": "0xA3",
+      "name": "Fruta del Árbol del Poder (Tree of Might Fruit)",
+      "type": "Stat Boost / Permanent",
+      "price_zeni": 100000,
+      "effect": "Permanently increases character Strength (STR) by +5.",
+      "icon": "ui_icons/item_tree_of_might_fruit.png",
+      "flavor_text": "Fruta legendaria cultivada con energía cósmica. Aumenta tu fuerza física para siempre."
+    },
+    {
+      "item_id": "0xA4",
+      "name": "Sopa Gourmet del Otro Mundo",
+      "type": "Gourmet Food / Consumable",
+      "price_zeni": 15000,
+      "effect": "Restores 5,000 HP and 5,000 Ki instantly.",
+      "icon": "ui_icons/item_whis_sundae.png",
+      "flavor_text": "Caldo revitalizante reconfortante para guerreros que entrenan en el Otro Mundo."
+    }
+  ],
+  "special_relics": [
+    {
+      "item_id": "0xB1",
+      "name": "Reliquia de Zaiko (AF Dragon Relic)",
+      "drop_by": "Zaiko (Post-Game Boss in East District 439 Forest)",
+      "effect": "Key item required to unlock Gogeta SSJ4 Ultimate Fusion Transformation."
+    }
+  ]
+}

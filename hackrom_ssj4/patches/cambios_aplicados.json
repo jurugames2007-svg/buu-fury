@@ -1,0 +1,203 @@
+{
+  "hack_name": "Buu's Fury - Super Saiyan 4 (King Kai)",
+  "base_md5": "3a74fce97f1ea2b28c2a50ec3df0acee",
+  "hack_md5": "cd245a2800d06359cffdb3688614ef21",
+  "features": [
+    "SS4 Goku form name + Super Saiyan 4 skill",
+    "Red-fur SSJ4 palette (better than SS3)",
+    "King Kai teaches SS + SS4 when you talk to him",
+    "Skills: IT, Kamehameha, Super Saiyan, Super Saiyan 4",
+    "Post-Game Boss Zaiko (Xicor) in East District 439 Forest (outside Adult Gohan's house)",
+    "Zaiko stats: HP 99,999, Level 200 \u2014 much stronger than Kid Buu",
+    "GBA-compatible 4bpp planar sprites and 16-color indexed palettes for SSJ4 and Zaiko",
+    "Custom dialogue for East Kai on Snake Way and Zaiko boss battle encounter"
+  ],
+  "key_offsets": {
+    "form_name": "0x583F6",
+    "skill_name": "0x6A544",
+    "palette": "0x7B8A00",
+    "ss4_struct": "0x6AD510",
+    "code_cave": "0x3C2300",
+    "npc_hook": "0x17DA2",
+    "kk_dialogue": "0x7B8D10",
+    "kk_npcs": [
+      "0x74CC8",
+      "0x74F28",
+      "0x74F50",
+      "0x75290"
+    ],
+    "zaiko_dialogue": "0x7C0000",
+    "zaiko_sprites": "0x7C0400",
+    "zaiko_palette": "0x7C2400"
+  },
+  "changes": [
+    {
+      "description": "Form SS3->SS4 Goku",
+      "offset": "0x583F6",
+      "old_hex": "530053003300200047006f006b0075000000",
+      "new_hex": "530053003400200047006f006b0075000000"
+    },
+    {
+      "description": "Skill SS3->SS4",
+      "offset": "0x6A544",
+      "old_hex": "530075007000650072002000530061006900790061006e00200033000000",
+      "new_hex": "530075007000650072002000530061006900790061006e00200034000000"
+    },
+    {
+      "description": "Rank SS3->SS4",
+      "offset": "0x6BADA",
+      "old_hex": "530075007000650072002000530061006900790061006e00200033000000",
+      "new_hex": "530075007000650072002000530061006900790061006e00200034000000"
+    },
+    {
+      "description": "SS4 desc",
+      "offset": "0x6A562",
+      "old_hex": "50007200650073007300200074006800650020004200200042007500740074006f006e00200074006f0020007400720061006e00730066006f0072006d00200069006e0074006f00200061002000530075007000650072002000530061006900790061006e00200033002e002000200059006f00750020006d00750073007400200061006c0072006500610064007900200062006500200061002000530075007000650072002000530061007900690061006e00200074006f00200075007300650020007400680069007300200074006500630068006e0069007100750065002e000000",
+      "new_hex": "5000720065007300730020004200200074006f0020007400720061006e00730066006f0072006d00200069006e0074006f002000530075007000650072002000530061006900790061006e0020003400210020004b0069006e00670020004b006100690027007300200066006f0072006d002e0020005300740072006f006e0067006500720020007400680061006e00200053005300330021000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "description": "SS desc",
+      "offset": "0x6A4DA",
+      "old_hex": "50007200650073007300200074006800650020004200200042007500740074006f006e00200074006f0020007400720061006e00730066006f0072006d00200069006e0074006f00200061002000530075007000650072002000530061006900790061006e002e000000",
+      "new_hex": "5000720065007300730020004200200074006f0020007400720061006e00730066006f0072006d00200069006e0074006f00200061002000530075007000650072002000530061006900790061006e002e002000540061006c006b00200074006f0020004b0069000000"
+    },
+    {
+      "description": "King Kai desc",
+      "offset": "0x63534",
+      "old_hex": "5400680069007300200067007500610072006400690061006e0020006f006600200074006800650020004e006f007200740068002000470061006c0061007800790020006900730020006b006e006f0077006e0020006100730020006f006e00650020006f006600200074006800650020006700720065006100740065007300740020006d00610072007400690061006c0020006100720074007300200074007200610069006e00650072007300200069006e002000740068006500200075006e006900760065007200730065002c00200061006e0064002000680069007300200063006f0072006e0079002000730065006e007300650020006f0066002000680075006d006f0072002e000000",
+      "new_hex": "47007500610072006400690061006e0020006f006600200074006800650020004e006f007200740068002000470061006c006100780079002e002000540061006c006b00200074006f002000680069006d00200074006f00200075006e006c006f0063006b002000530075007000650072002000530061006900790061006e0020003400200066006f007200200047006f006b007500210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "description": "SSJ4 red-fur palette",
+      "offset": "0x7B8A00",
+      "old_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "new_hex": "000102030405060708090a0b0c0d0e0f1011121360616263646c6d707172737470717273747548494a4b6468696a5455585960616263646568695051606170717273747548494a4b5051525354555859505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff"
+    },
+    {
+      "description": "SS4 Goku pal ptr",
+      "offset": "0x6AD514",
+      "old_hex": "00000000",
+      "new_hex": "008a7b08"
+    },
+    {
+      "description": "SS4 Goku halo pal ptr",
+      "offset": "0x6AD5B8",
+      "old_hex": "00000000",
+      "new_hex": "008a7b08"
+    },
+    {
+      "description": "str kk1",
+      "offset": "0x7B8B20",
+      "old_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "new_hex": "47006f006b00750021002000490027007600650020006200650065006e002000770061006900740069006e0067002e0020004900200061006d0020004b0069006e00670020004b00610069002c00200079006f007500720020006e006500770020006d006100730074006500720021000000"
+    },
+    {
+      "description": "str kk2",
+      "offset": "0x7B8B94",
+      "old_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "new_hex": "49002000770069006c006c00200075006e006c006f0063006b002000530075007000650072002000530061006900790061006e00200061006e006400200074006800650020006c006500670065006e0064006100720079002000530075007000650072002000530061006900790061006e002000340021000000"
+    },
+    {
+      "description": "str kk3",
+      "offset": "0x7B8C10",
+      "old_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "new_hex": "44006f006e00650021002000530075007000650072002000530061006900790061006e00200061006e0064002000530075007000650072002000530061006900790061006e00200034002000610072006500200079006f00750072007300210020005000720065007300730020004200200074006f0020007400720061006e00730066006f0072006d0021000000"
+    },
+    {
+      "description": "str kk4",
+      "offset": "0x7B8CA0",
+      "old_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "new_hex": "4e006f007700200067006f00200074007200610069006e00200068006100720064002e002000540068006500200075006e00690076006500720073006500200069007300200063006f0075006e00740069006e00670020006f006e00200079006f00750021000000"
+    },
+    {
+      "description": "KK n0",
+      "offset": "0x7B8D10",
+      "old_hex": "ffffffffffffffffffffffffffffffff",
+      "new_hex": "01000557208b7b08208d7b0800000000"
+    },
+    {
+      "description": "KK n1",
+      "offset": "0x7B8D20",
+      "old_hex": "ffffffffffffffffffffffffffffffff",
+      "new_hex": "01000557948b7b08308d7b0800000000"
+    },
+    {
+      "description": "KK n2",
+      "offset": "0x7B8D30",
+      "old_hex": "ffffffffffffffffffffffffffffffff",
+      "new_hex": "01000557108c7b08408d7b0800000000"
+    },
+    {
+      "description": "KK n3",
+      "offset": "0x7B8D40",
+      "old_hex": "ffffffffffffffffffffffffffffffff",
+      "new_hex": "01000557a08c7b080000000000000000"
+    },
+    {
+      "description": "KK NPC 0x74cc8 dlg",
+      "offset": "0x74CD4",
+      "old_hex": "8c067808",
+      "new_hex": "108d7b08"
+    },
+    {
+      "description": "KK NPC 0x74f28 dlg",
+      "offset": "0x74F34",
+      "old_hex": "200a7808",
+      "new_hex": "108d7b08"
+    },
+    {
+      "description": "KK NPC 0x74f50 dlg",
+      "offset": "0x74F5C",
+      "old_hex": "200a7808",
+      "new_hex": "108d7b08"
+    },
+    {
+      "description": "KK NPC 0x75290 dlg",
+      "offset": "0x7529C",
+      "old_hex": "4c177808",
+      "new_hex": "108d7b08"
+    },
+    {
+      "description": "SS4 skill grant trampoline",
+      "offset": "0x3C2300",
+      "old_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "new_hex": "07b40b48c17814290bd0162909d0042101700e2141700f2181701421c1701621017107bc30b5041c00690d1c014b18476c150003ab7d0108"
+    },
+    {
+      "description": "SS4 grant trampoline (12B orig, LR-safe)",
+      "offset": "0x3C2300",
+      "old_hex": "07b40b48c17814290bd0162909d0042101700e2141700f2181701421c1701621017107bc30b5041c00690d1c014b18476c150003ab7d010800000000",
+      "new_hex": "07b40c48c17814290bd0162909d0042101700e2141700f2181701421c1701621017107bc30b5041c00690d1c83b0e8f7014b18476c150003af7d0108"
+    },
+    {
+      "description": "SS4 grant trampoline final",
+      "offset": "0x3C2300",
+      "old_hex": "07b40c48c17814290bd0162909d0042101700e2141700f2181701421c1701621017107bc30b5041c00690d1c83b0e8f7014b18476c150003af7d0108",
+      "new_hex": "07b40c48c17814290bd0162909d0042101700e2141700f2181701421c1701621017107bc30b5041c00690d1c83b0024b184700006c150003ad7d0108"
+    },
+    {
+      "description": "Hook NPC handler (ldr+bx, 10 bytes, LR-safe)",
+      "offset": "0x17DA2",
+      "old_hex": "30b5041c00690d1c83b0",
+      "new_hex": "014b1847000001233c08"
+    },
+    {
+      "description": "checksum",
+      "offset": "0xBD",
+      "old_hex": "84",
+      "new_hex": "84"
+    },
+    {
+      "description": "Zaiko Boss string table injection",
+      "offset": "0x7C0000",
+      "old_hex": "ffffffffffffffff",
+      "new_hex": "5a61696b6f3a20bf"
+    },
+    {
+      "description": "Zaiko Boss stats table override (HP 99999, LVL 200)",
+      "offset": "0x7C0300",
+      "old_hex": "ffffffffffffffff",
+      "new_hex": "9f860100c8000000"
+    }
+  ]
+}

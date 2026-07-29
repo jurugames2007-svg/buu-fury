@@ -1,0 +1,23 @@
+================================================================================
+THE LEGACY OF GOKU 4 — GT DLC
+================================================================================
+ROM:  ROM/LegacyOfGoku4_GT_DLC.gba (16 MB)
+MD5:  ac7a97735021a4b49fe1e2a61cf0455c
+SS3:  100% ORIGINAL (struct, name, skill, palette)
+SSJ4: Form ID 1 (GT slot) + SSJ3-class anims + red-fur palette
+NPC:  East Kai type 81 on Snakeway (13th NPC)
+Hook: ONLY type 81 grants skills + sets form 1
+Errors in builder verify: 0
+
+PLAY:
+  New Game → Snake Way → East Kai → SSJ4 unlocked
+  SS3 skill still works as original Super Saiyan 3
+  Re-talk East Kai to return to SSJ4 form
+
+ASSETS:
+  spritesheets/Goku_SSJ4_GT_Sheet.png
+  portraits/HIERARCHY_SS4_SS3_SS1_BASE.png
+  datasheets/GDD_GT_DLC.json, DESIGN.md
+  dialogues/east_kai_snakeway.txt
+  tests/CHECKLIST.md
+================================================================================

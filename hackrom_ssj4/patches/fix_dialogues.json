@@ -1,0 +1,26 @@
+[
+  {
+    "offset": "0x74cd4",
+    "desc": "Restore KK NPC 0x74CC8 original dialogue",
+    "old": "108d7b08",
+    "new": "8c067808"
+  },
+  {
+    "offset": "0x74f34",
+    "desc": "Restore KK NPC 0x74F28 original dialogue",
+    "old": "108d7b08",
+    "new": "200a7808"
+  },
+  {
+    "offset": "0x74f5c",
+    "desc": "Restore KK NPC 0x74F50 original dialogue",
+    "old": "108d7b08",
+    "new": "200a7808"
+  },
+  {
+    "offset": "0x7529c",
+    "desc": "Restore KK NPC 0x75290 original dialogue",
+    "old": "108d7b08",
+    "new": "4c177808"
+  }
+]

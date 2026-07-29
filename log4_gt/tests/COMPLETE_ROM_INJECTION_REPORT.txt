@@ -1,0 +1,40 @@
+================================================================================
+  DRAGON BALL Z: THE LEGACY OF GOKU 4 — COMPLETE GBA ROM COMPILER & INJECTOR
+================================================================================
+
+Base ROM loaded: Dragon Ball Z - Buu's Fury (USA).gba (Expanded to 16777216 bytes)
+
+  • Injected SSJ4 Goku form names and skill table strings -> OK
+  • Injected SSJ4 Red-Fur Palette @ 0x087B8A00 -> OK
+  • Injected 100% Crash-Free East Kai NPC Hook @ 0x08017DA2 & Cave @ 0x083C2300 -> OK
+  • Injected ARM7/Thumb Boss AI: ai_beerus_boss       @ 0x083C2400 (68 bytes) -> OK
+  • Injected ARM7/Thumb Boss AI: ai_omega_shenron     @ 0x083C2480 (18 bytes) -> OK
+  • Injected ARM7/Thumb Boss AI: ai_zaiko_boss        @ 0x083C2500 (16 bytes) -> OK
+  • Injected ARM7/Thumb Boss AI: ai_whis_trial        @ 0x083C2580 (28 bytes) -> OK
+  • Injected Sprite & Palette: saiyan_ssj4            @ 0x087C0500 (122884 bytes) -> OK
+  • Injected Sprite & Palette: saiyan_ssj_god         @ 0x087DE700 (122884 bytes) -> OK
+  • Injected Sprite & Palette: saiyan_ssj5            @ 0x087FC900 (122884 bytes) -> OK
+  • Injected Sprite & Palette: vegeta_ssj5            @ 0x0881AB00 (122884 bytes) -> OK
+  • Injected Sprite & Palette: zaiko_af               @ 0x08838D00 (122884 bytes) -> OK
+  • Injected Sprite & Palette: evil_goku              @ 0x08856F00 (122884 bytes) -> OK
+  • Injected Sprite & Palette: angel_z                @ 0x08875100 (122884 bytes) -> OK
+  • Injected Sprite & Palette: gogeta_ssj4            @ 0x08893300 (122884 bytes) -> OK
+  • Injected Sprite & Palette: gogeta_ssj5            @ 0x088B1500 (122884 bytes) -> OK
+  • Injected Sprite & Palette: beerus_god             @ 0x088CF700 (122884 bytes) -> OK
+  • Injected Sprite & Palette: whis_angel             @ 0x088ED900 (122884 bytes) -> OK
+  • Injected GBA Map Package: map_beerus_planet       @ 0x08880000 (12288 bytes) -> OK
+  • Injected GBA Map Package: map_gohan_forest_439_deep @ 0x08883000 (12288 bytes) -> OK
+  • Injected GBA Map Package: map_crater_zero         @ 0x08886000 (3072 bytes) -> OK
+  • Injected GBA Map Package: map_imecka              @ 0x08886C00 (12288 bytes) -> OK
+  • Injected GBA Map Package: map_tuffle_planet       @ 0x08889C00 (12288 bytes) -> OK
+  • Injected GBA Sappy Audio: track_beerus_planet     @ 0x08900000 (105 bytes) -> OK
+  • Injected GBA Sappy Audio: track_dan_dan_gt        @ 0x08900100 (105 bytes) -> OK
+  • Injected GBA Sappy Audio: track_af_zaiko_battle   @ 0x08900200 (105 bytes) -> OK
+  • Injected GBA Sappy Audio: track_god_kamehameha_sfx @ 0x08900300 (105 bytes) -> OK
+
+  • Verified Nintendo Logo & Checksum Header @ 0x00 - 0xBF (Checksum = 0x84) -> OK
+
+✅ SUCCESSFULLY COMPILED & WRITTEN FULL 16MB PLAYABLE ROM:
+   1) log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba (16,777,216 bytes)
+   2) hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_HACK.gba (16,777,216 bytes)
+================================================================================

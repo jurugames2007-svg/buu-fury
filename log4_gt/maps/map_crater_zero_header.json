@@ -1,0 +1,29 @@
+{
+  "map_id": "map_crater_zero",
+  "name": "Cr\u00e1ter Cero (GT Shadow Dragons Climax)",
+  "dimensions": {
+    "width_tiles": 32,
+    "height_tiles": 32
+  },
+  "tileset_offset": "0x08A00000",
+  "palette_offset": "0x08A10000",
+  "tilemap_file": "map_crater_zero.bin",
+  "collision_file": "map_crater_zero_collision.bin",
+  "preview_image": "map_crater_zero_preview.png",
+  "music_track_id": 139,
+  "npcs": [
+    {
+      "name": "Omega Shenron",
+      "type": 96,
+      "pos_x": 16,
+      "pos_y": 16
+    }
+  ],
+  "triggers": [
+    {
+      "type": "portal",
+      "target_map": "Snakeway",
+      "zone_y": 31
+    }
+  ]
+}

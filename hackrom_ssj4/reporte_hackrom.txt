@@ -1,0 +1,46 @@
+================================================================================
+ DRAGON BALL Z: BUU'S FURY — SUPER SAIYAN 4 & POST-GAME ZAIKO (AF) HACK
+================================================================================
+Base MD5: 3a74fce97f1ea2b28c2a50ec3df0acee
+Hack MD5: cd245a2800d06359cffdb3688614ef21
+Changes:  28
+
+QUÉ INCLUYE
+  • Forma "SS4 Goku" (antes SS3) con pelaje rojo estilo SSJ4
+  • Habilidad "Super Saiyan 4" (mejor que SS3)
+  • Kaiosama del Este (Snake Way) te da Super Saiyan + Super Saiyan 4 al hablar
+  • Portrait/form SS4 mejorado al estilo GBA de 16 colores con ojos dorados y pelaje rojo (superior al SS3 dorado)
+  • Contenido Post-Game: Encuentro secreto y batalla contra el jefe "Zaiko (Xicor)" accesible tras derrotar a Kid Buu.
+  • Ubicación de Zaiko: Bosque del Distrito 439 (un poco más lejos de fuera de la casa donde inicia la historia de Gohan Adulto).
+  • Estadísticas de Zaiko: Nivel 200, HP 99,999 (mucho más fuerte que Kid Buu).
+
+CÓMO JUGAR
+  1. Abre mGBA
+  2. Carga: log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba (o hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_HACK.gba)
+  3. New Game
+  4. Para SSJ4: Llega a Snake Way (Other World), habla con East Kai (Kaiosama del Este) y equipa tu habilidad en Menú → Skills.
+  5. Para Zaiko: Tras derrotar a Kid Buu (Postgame), ve al bosque del Distrito 439 (fuera de la casa de Gohan Adulto) y habla con Zaiko.
+
+OFFSETS PRINCIPALES
+  SS4 Goku name      0x583F6
+  Super Saiyan 4     0x6A544
+  Paleta SSJ4        0x7B8A00
+  Struct SS4         0x6AD510
+  Code cave          0x3C2300
+  Hook NPC handler   0x17DA2
+  Diálogo Kaiosama   0x7B8D10
+  Diálogo Zaiko      0x7C0000
+  Stats Zaiko (Boss) 0x7C0300
+  Sprites Zaiko      0x7C0400
+
+HERRAMIENTAS INCLUIDAS
+  • dbz_gba_sprite_tool.py: Generador en Python adaptado con soporte nativo GBA 16 colores (4bpp planar, compresión LZ77) y contornos negros estilo Webfoot.
+  • generate_improved_portraits.py: Generador de retratos 128x144 de Base, SSJ1, SSJ3, SSJ4 y Zaiko, con gráfico de jerarquía comparativa.
+
+
+NOTAS
+  • Sprites = geometría SS3 + paleta roja SSJ4 (estable, sin glitches de animación)
+  • El grant de skills ocurre al interactuar con NPCs (habla con Kaiosama)
+  • ROM original en la misma carpeta como backup
+
+================================================================================

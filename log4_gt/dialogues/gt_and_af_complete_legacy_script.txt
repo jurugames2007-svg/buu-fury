@@ -1,0 +1,85 @@
+================================================================================
+  THE LEGACY OF GOKU 4 — GUION COMPLETO DE EXPANSIÓN: THE AF CHRONICLES
+================================================================================
+ACTIVACIÓN DEL POST-GAME:  Hablar con el Anciano Kaiosama en el Planeta Sagrado 
+                           tras haber derrotado a Omega Shenron en la Saga GT.
+CURVA DE NIVEL EXTENDIDA:  Nivel 200 a Nivel 350 (Memoria GBA 100% aprovechada).
+ESTILO NARRATIVO:          Cinemáticas in-engine estilo Webfoot ("Buu's Fury").
+
+================================================================================
+  TRANSICIÓN DE GT A AF — LA LLAMADA DEL ANCIANO KAIOSAMA (NIVEL 200)
+================================================================================
+[ESCENARIO]:           Planeta Sagrado de los Kaios (Sacred World of the Kais).
+[REQUISITO]:           Haber vencido a Omega Shenron y poseer nivel 200.
+
+Anciano Kaiosama: ¡Goku! ¡Vegeta! ¡No celebren tan rápido! ¡La destrucción de los 
+                  Dragones Oscuros ha resquebrajado los muros dimensionales del 
+                  Otro Mundo!
+Kaioshin del Este: ¡Una presencia terrorífica ha descendido sobre nuestro santuario!
+                   ¡Su Ki es increíblemente denso, como el de una deidad guerrera!
+Goku SSJ4:         ¿Eh? ¿Alguien más fuerte que Omega Shenron? ¡Eso suena emocionante!
+Anciano Kaiosama:  ¡No es un juego, Goku! ¡Se trata del Saiyajin Prohibido! 
+                   ¡Debemos abrir el portal hacia la Dimensión AF de inmediato!
+
+================================================================================
+  SAGA 1: ZAIKO — EL HIJO DE LA SANGRE Y EL GEN (NIVEL 200 – 250)
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 5: ZAIKO, THE SON OF BLOOD AND GENE"
+[ESCENARIO]:           Planeta Sagrado Corrompido & El Sello de la Espada Z.
+
+[CINEMÁTICA 10: EL ENCUENTRO EN EL SANTUARIO PROFANADO]
+Zaiko:        ¿Así que tú eres mi padre, Son Goku? Soy Zaiko. Llevo tu sangre 
+              y la autoridad del Reino Kaioshin Devastado.
+Goku SSJ4:    ¿Mi hijo? ¡Yo no te conozco! ¡Pero tu energía es abrumadora!
+Zaiko:        ¡Omega Shenron era un juguete comparado conmigo! ¡Muéstrame el 
+              verdadero poder del linaje Saiyajin de la Tierra!
+
+[CINEMÁTICA 11: EL RITUAL DE LOS 7 SAIYAJINS Y DESPERTAR DEL SUPER SAIYAN 5]
+Anciano Kaiosama: ¡Goku! ¡El Super Saiyan 4 no bastará! ¡Necesitamos canalizar 
+                  el Ki de 7 guerreros Saiyajin para romper tu candado genético!
+[PORTRAIT: Goku SSJ4 -> Destello Plateado -> PORTRAIT: Goku SSJ5 (portrait_ssj5.png)]
+Goku SSJ5:    Este pelaje plateado... Siento una paz absoluta y un poder infinito.
+              ¡Zaiko, aquí termina tu invasión!
+[BOSS BATTLE: ZAIKO — Nivel 250 — HP: 180,000] -> [VICTORIA: Obtención Núcleo Genético].
+
+================================================================================
+  SAGA 2: ÁNGEL Z — LA DIMENSIÓN DEL VACÍO BLANCO (NIVEL 250 – 300)
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 6: ANGEL Z AND THE WHITE VOID"
+[ESCENARIO]:           El Vacío Absoluto & El Templo Invertido.
+
+[CINEMÁTICA 12: EL JUICIO DE LA LUZ CELESTIAL]
+Ángel Z:      Mortales... Han alterado el equilibrio cósmico con sus evoluciones. 
+              Soy Ángel Z. Mi luz sagrada borrará sus existencias.
+Vegeta SSJ4:  ¿Luz sagrada? ¡No me hagas reír! ¡Yo soy el Príncipe de los Saiyajin!
+[PORTRAIT: Vegeta SSJ4 -> Cámara de Gravedad Tsufuru -> PORTRAIT: Vegeta SSJ5]
+Vegeta SSJ5:  ¡Observa el Super Saiyan 5, monstruo! ¡Te quemaré con mi Final 
+              Galick Blaze!
+[REQUISITO DE COMBATE]: Equipar el objeto "Espejo del Vacío" para reflejar su luz.
+[BOSS BATTLE: ÁNGEL Z — Nivel 300 — HP: 240,000] -> [VICTORIA: Obtención Lágrima Ángel Z].
+
+================================================================================
+  SAGA 3: EVIL GOKU — EL REVERSO DE LA LUZ (NIVEL 300 – 350)
+================================================================================
+[BANNER DE CAPÍTULO]:  "CHAPTER 7: EVIL GOKU, THE REVERSE OF LIGHT"
+[ESCENARIO]:           La Tierra del Caos Absoluto & Grieta Dimensional.
+
+[CINEMÁTICA 13: EL CLON DE LA OSCURIDAD PURA]
+Evil Goku:    Yo soy tu sombra, Kakaroto. Todo el Ki maligno que descartaste 
+              al salvar el universo ha tomado forma en mí.
+Gohan Místico: ¡Padre! ¡Su Ki maligno anula nuestra regeneración de energía!
+Goku SSJ5:    ¡Vegeta! ¡Este enemigo tiene 4 barras de vida independientes! 
+              ¡Si no nos fusionamos ahora mismo, la Tierra del Caos será destruida!
+
+[CINEMÁTICA 14: EL CLÍMAX ABSOLUTO — FUSIÓN GOGETA SUPER SAIYAN 5]
+Vegeta SSJ5:  ¡No me gusta fusionarme, pero no te dejaré morir aquí, Kakaroto!
+Goku & Vegeta: ¡¡FUSIÓN... ¡¡HA!!
+[PORTRAIT: Gogeta SSJ5 (portrait_gogeta_ssj5.png) APARECE CON AURA PLATEADA-DORADA]
+Gogeta SSJ5:  ¡Yo no soy Goku ni Vegeta! ¡Soy la justicia definitiva que purificará 
+              tu oscuridad! ¡¡100x BIG BANG KAMEHAMEHA FINAL!!
+[BOSS BATTLE: EVIL GOKU — Nivel 350 — HP: 350,000 (4 Barras de Salud)] -> [VICTORIA].
+
+[CINEMÁTICA FINAL: RESTAURACIÓN DEL UNIVERSO Y EPÍLOGO DE THE FINAL LEGACY]
+[La grieta púrpura se cierra; el cielo de la Tierra vuelve a ser azul pacífico].
+Gogeta SSJ5:  El orden de la galaxia ha sido restaurado para siempre.
+================================================================================
