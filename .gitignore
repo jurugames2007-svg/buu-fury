@@ -1,0 +1,10 @@
+# Build artifacts
+ssj4_v2/ROM/*.gba
+ssj4_v2/tests/*.log
+*.pyc
+__pycache__/
+*.tmp
+
+# Keep the 8 MiB base ROM from the previous session versionable/downloadable.
+# This exception must follow the broad ssj4_v2 ROM rule above.
+!ssj4_v2/ROM/DBZ_Buus_Fury_ORIGINAL.gba
