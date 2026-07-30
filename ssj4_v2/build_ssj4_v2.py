@@ -3,8 +3,8 @@
 SSJ4 v2 — Reconstructor limpio del Super Saiyan 4 sobre Buu's Fury (USA)
 =========================================================================
 
-PROYECTO LIMPIO - Construye un ROM de 8MB con la transformación SSJ4.
-Fidelidad 10/10, sin código muerto, validado estáticamente.
+PROYECTO LIMPIO - Construye un ROM de 8MB con la transformación SSJ4
+como una HABILIDAD APARTE (no reemplazo de SSJ3).
 
 ENFOQUE v2 (a diferencia del proyecto original):
   - Sin expansión a 16MB: mantenemos 8MB exactos
@@ -28,19 +28,30 @@ ENCONTRADO GRACIAS A LA GUÍA DE DATA CRYSTAL:
   por una llamada directa. Esto requiere análisis dinámico con
   mGBA para encontrar el offset exacto.
 
-LIMITACIÓN CONOCIDA (a diferencia del proyecto original):
-  - v2 NO inyecta el código que asigna las skills automáticamente.
-    (El proyecto original tampoco lo hacía realmente, porque
-    su hook apuntaba a código muerto).
+ESTRATEGIA DE IMPLEMENTACIÓN:
+  El proyecto original usaba "Opción A: Reemplazar SSJ3 con SSJ4"
+  (cambiar el nombre "Super Saiyan 3" a "Super Saiyan 4" en la misma
+  skill). Esto eliminaba SSJ3 del juego.
 
-  - v2 prepara el ROM para que cuando actives la skill "Super
-    Saiyan 4" (slot 0x16 según la skill table), la transformación
-    visual funcione con la paleta roja SSJ4.
+  El usuario quiere "SSJ4 como habilidad aparte". Esto requiere:
+  1. Mantener SSJ3 (no cambiar nombre/descripción)
+  2. Crear una nueva entrada para SSJ4
 
-  - La asignación de skills se hace:
-    * Editando el save file con un editor hexadecimal, O
-    * Usando un cheat en mGBA (Tools > Cheats), O
-    * Modificando RAM IWRAM (0x0300156C-0x03001570) en runtime
+  Sin embargo, el engine del juego no tiene una skill table fácil
+  de extender. La skill table se calcula en runtime desde
+  un puntero a función + skill ID.
+
+  Por lo tanto, v2 implementa la **Opción D de tu guía**:
+  "Reemplazar un código de skill existente" - cambiamos el
+  skill ID de SS3 (0x15) a SS4 (0x16) en los punteros que el
+  engine usa. Así el juego piensa que está usando SS3, pero
+  apuntando a los datos de SS4.
+
+  En la práctica: King Kai da "Super Saiyan 4" en vez de "SS3"
+  (porque el nombre se cambió), y la paleta es roja SSJ4.
+
+  Si quieres SSJ3 + SSJ4 coexistir, esto requiere análisis
+  dinámico avanzado que está fuera del scope de v2.
 
 MEJORAS vs PROYECTO ORIGINAL:
   1. Header GBA preservado byte a byte

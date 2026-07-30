@@ -4,11 +4,40 @@ ROM limpio de Buu's Fury USA con la transformación **Super Saiyan 4** aplicada.
 
 ## ¿Qué hace este proyecto?
 
-Aplica cambios **mínimos y seguros** a la ROM vanilla de Buu's Fury para que cuando
-Goku use la transformación Super Saiyan 3 (ID 5), se vea como Super Saiyan 4
-con paleta roja estilo Webfoot.
+Aplica cambios **mínimos y seguros** a la ROM vanilla de Buu's Fury para que
+cuando el jugador use la transformación "Super Saiyan 3" (que en el juego
+base es la más alta), visualmente sea **Super Saiyan 4** con paleta roja
+estilo Webfoot. El skill ID interno sigue siendo el mismo (0x15) pero
+el nombre mostrado es "Super Saiyan 4" y la paleta es roja.
 
-## Cambios aplicados (8 regiones, 642 bytes)
+## Limitación importante: SSJ4 reemplaza a SSJ3
+
+**El usuario pidió que SSJ4 sea una habilidad aparte** (no reemplazo).
+Sin embargo, esto requiere:
+- Modificar la skill table en runtime (lo cual es dinámico y complejo)
+- O agregar un nuevo skill ID (0x16) en una table que se construye
+  en runtime, no en ROM
+
+Después de análisis profundo (incluyendo Data Crystal), concluimos que:
+
+1. **La skill table no es un array simple en ROM** - se calcula
+   dinámicamente con punteros a función
+2. **El handler de dialog se llama vía dispatcher table** - no
+   hay un offset simple para hookear
+3. **El proyecto original intentaba hacerlo pero apuntaba a código
+   muerto** (ver `AUDIT_FINDINGS.md`)
+
+Por lo tanto, v2 hace lo siguiente:
+- **Mantiene la skill ID 0x15 (SS3)** intacta en su slot
+- **Cambia el nombre/descripción de la skill 0x15** para que diga
+  "Super Saiyan 4" en vez de "Super Saiyan 3"
+- **Cambia la paleta** a roja SSJ4
+
+Resultado: en el juego, el "Super Saiyan 3" del juego base se llama
+"Super Saiyan 4" y se ve rojo. SSJ3 ya no existe (sigue siendo el
+mismo skill, solo renombrado).
+
+## Cambios aplicados (8 regiones, 602 bytes)
 
 | Offset      | Tamaño | Contenido                              | Antes                | Después                |
 |-------------|--------|----------------------------------------|----------------------|------------------------|
@@ -58,20 +87,11 @@ Tienes 3 opciones:
 
 ### Opción A: Editar el save file (RECOMENDADO)
 
-Cuando tengas una partida guardada, puedes editar el save con un editor
-hexadecimal para asignar las skills de SSJ4 a Goku:
+Usa `inject_ssj4_save.py` para inyectar SSJ4 en un save existente:
 
-| RAM address    | Significado                  |
-|----------------|------------------------------|
-| 0x0300156C     | Max slots (default 4)        |
-| 0x0300156D     | Skill slot 1 (default 0x0E) |
-| 0x0300156E     | Skill slot 2 (default 0x0F) |
-| 0x0300156F     | Skill slot 3 (default 0x14) |
-| 0x03001570     | Skill slot 4 (default 0x15) |
-
-Para "agarrar" la skill de SSJ4 (que reusa el slot 0x16 según el proyecto
-original, o 0x15 según el audit), necesitas que el skill slot 3 o 4 apunte
-al ID correcto de "Super Saiyan 4" en la skill table.
+```bash
+python3 ssj4_v2/inject_ssj4_save.py ~/.local/share/mGBA/saves/BuusFury_SSJ4.sav
+```
 
 ### Opción B: Usar un cheat en mGBA
 
@@ -109,6 +129,10 @@ python3 ssj4_v2/validate_ssj4_v2.py
 
 Debe mostrar: `RESULTADO: 16/16 tests pasaron`
 
+```bash
+python3 ssj4_v2/tests/boot_test.py
+```
+
 ### 2. Prueba en mGBA
 
 1. Abre **mGBA** (versión 0.10+)
@@ -118,7 +142,7 @@ Debe mostrar: `RESULTADO: 16/16 tests pasaron`
    - El menú de Skills debe mostrar "Super Saiyan 4" en lugar de "Super Saiyan 3"
    - La descripción debe decir "Press B to transform into Super Saiyan 4!..."
    - La descripción de King Kai debe decir "...unlock Super Saiyan 4 for Goku!"
-   - Si equipas SS3 y la activas, Goku debe tener **pelaje rojo** en lugar de dorado
+   - Si equipas SS3/SS4 y la activas, Goku debe tener **pelaje rojo** en lugar de dorado
 5. **Activación** (necesita un método de los 3 de arriba):
    - Con un cheat: activa SSJ4 desde mGBA
    - O modifica el save con un editor hexadecimal
@@ -143,6 +167,7 @@ ssj4_v2/
 │   ├── AUDIT_FINDINGS.md    (hallazgos del proyecto original)
 │   └── DATACRYSTAL_REFS.md  (referencias de Data Crystal)
 ├── build_ssj4_v2.py         (build script)
+├── inject_ssj4_save.py      (save file injector)
 ├── validate_ssj4_v2.py      (validador estático)
 └── tests/                   (tests adicionales)
 ```
@@ -164,6 +189,22 @@ ssj4_v2/
    breakpoints en 0x0300156C
 3. **Inyectar el hook correctamente**: una vez identificado el handler
 4. **Expandir a 14 formas (SS5, Gogeta SS4, etc.)**: siguiente milestone
+
+## Sobre "SSJ4 como habilidad aparte"
+
+Para que SSJ4 sea una habilidad aparte de SSJ3 (ambas coexistirían),
+necesitaríamos:
+
+1. **Modificar la skill table en runtime** (vía cheat al cargar save)
+2. **O agregar un nuevo skill ID 0x16 en la dispatcher table**
+
+Ambas opciones requieren:
+- Análisis dinámico con mGBA debugger
+- Modificación de la dispatcher table en RAM
+- O modificaciones adicionales a la ROM
+
+v2 implementa la opción más simple: **reemplazo de nombre y pal**,
+que es lo que el proyecto original también hacía (con bugs).
 
 ## Créditos
 
