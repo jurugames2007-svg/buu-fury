@@ -19,6 +19,10 @@ required = {
         'type="Node2D"',
     ],
     "scripts/save_game.gd": ["SAVE_VERSION := 1", "save_snapshot", "load_snapshot"],
+    "scripts/game_state.gd": [
+        "MAX_LEVEL := 600", "STAT_CAPS", "bills_portals", "export_save_data", "import_save_data",
+    ],
+    "tests/test_game_state.gd": ["GT portal unlocks after Kid Buu", "AF portal unlocks after Baby"],
     "scripts/other_world_prototype.gd": [
         "func _process", "func _handle_movement", "func _interact",
         "func _snapshot", "func _restore_snapshot", "func _draw",
