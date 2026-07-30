@@ -1,0 +1,27 @@
+; Engine configuration file.
+; Dragon Ball: Legacy Beyond — prototype
+; Requires Godot 4.3 or newer.
+config_version=5
+
+[application]
+config/name="Legacy Beyond Prototype"
+run/main_scene="res://scenes/other_world_prototype.tscn"
+config/features=PackedStringArray("4.3")
+
+[autoload]
+SaveGame="*res://scripts/save_game.gd"
+
+[display]
+
+[display/window]
+size/viewport_width=240
+size/viewport_height=160
+size/window_width_override=960
+size/window_height_override=640
+stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
