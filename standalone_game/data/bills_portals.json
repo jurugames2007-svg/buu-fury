@@ -1,0 +1,1 @@
+{"schema_version":1,"npc":{"id":"bills","name":"Bills","map_id":"sacred_kai_world"},"portals":[{"id":"gt_dlc","label":"GT DLC: Grand Tour","requires_flag":"z_kid_buu_defeated","target_map":"amega"},{"id":"af_dlc","label":"AF DLC: Divine Aftermath","requires_flag":"gt_baby_defeated","target_map":"ice_planet"}]}

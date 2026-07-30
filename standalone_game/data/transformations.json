@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "forms": [
+    {"id": "base", "name": "Base", "ki_drain_per_second": 0, "stat_multiplier": 1.0, "aura": "none"},
+    {"id": "ssj1", "name": "Super Saiyan", "ki_drain_per_second": 2, "stat_multiplier": 8.0, "aura": "gold"},
+    {"id": "ssj2", "name": "Super Saiyan 2", "ki_drain_per_second": 4, "stat_multiplier": 16.0, "aura": "gold_lightning"},
+    {"id": "ssj3", "name": "Super Saiyan 3", "ki_drain_per_second": 8, "stat_multiplier": 40.0, "aura": "gold"},
+    {"id": "ssj4", "name": "Super Saiyan 4", "ki_drain_per_second": 12, "stat_multiplier": 4000.0, "aura": "crimson"},
+    {"id": "ssj5", "name": "Super Saiyan 5", "ki_drain_per_second": 18, "stat_multiplier": 8000.0, "aura": "blue"},
+    {"id": "ssj6", "name": "Super Saiyan 6", "ki_drain_per_second": 28, "stat_multiplier": 50000.0, "aura": "silver"},
+    {"id": "ssj7_f1", "name": "Super Saiyan 7 — Fase 1", "ki_drain_per_second": 40, "stat_multiplier": 100000.0, "aura": "dark_rainbow"}
+  ]
+}

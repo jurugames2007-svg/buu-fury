@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "characters": [
+    {"id": "goku", "name": "Goku", "role": "balanced", "start_level": 1, "playable": true, "forms": ["base", "ssj1", "ssj2", "ssj3", "ssj4", "ssj5", "ssj6", "ssj7_f1"]},
+    {"id": "vegeta", "name": "Vegeta", "role": "power", "start_level": 1, "playable": true, "forms": ["base", "ssj1", "ssj2", "ssj3", "ssj4", "ssj5", "ssj6"]},
+    {"id": "gohan", "name": "Gohan", "role": "ki", "start_level": 1, "playable": true, "forms": ["base", "ssj1", "ssj2", "ssj5"]},
+    {"id": "pan", "name": "Pan", "role": "speed", "start_level": 1, "playable": true, "forms": ["base"]},
+    {"id": "trunks_gt", "name": "Trunks GT", "role": "technical", "start_level": 1, "playable": true, "forms": ["base", "ssj1"]}
+  ]
+}
