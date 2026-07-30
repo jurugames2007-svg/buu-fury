@@ -6,9 +6,10 @@ Se añadió un proyecto Godot 4 mínimo y una escena ejecutable sin assets exter
 
 - Ventana lógica 240×160 con escalado 4×.
 - Movimiento de Goku provisional dentro de Snake Way.
-- Carga de Ki, ataque, enemigo de entrenamiento, HP/Ki y HUD.
-- NPC King Kai con misión simple de derrotar al enemigo.
-- Guardado y carga JSON local versionados.
+- Carga de Ki, ataque físico, Ki Blast, HP/Ki, daño, invulnerabilidad breve y HUD.
+- Enemigo de entrenamiento con IA de persecución, ataque y derrota.
+- NPC King Kai con misión simple, flag de progreso y recompensa de EXP.
+- Guardado y carga JSON local versionados, incluyendo estado de progreso.
 
 ## Controles
 
