@@ -30,7 +30,11 @@ for relative_path, tokens in required.items():
     for token in tokens:
         assert token in content, f"{relative_path}: missing {token!r}"
 
-assert not (ROOT / "assets" / "ASSET_MANIFEST.json").exists(), (
-    "Do not claim assets are approved before an asset manifest is populated."
-)
+import json
+manifest_path = ROOT / "assets" / "ASSET_MANIFEST.json"
+if manifest_path.exists():
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest.get("assets", []) == [], (
+        "No assets may be approved until their source and redistribution rights are recorded."
+    )
 print("PASS: Godot bootstrap wiring is structurally present (static check only).")
