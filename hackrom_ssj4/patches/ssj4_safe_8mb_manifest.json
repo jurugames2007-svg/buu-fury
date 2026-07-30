@@ -1,0 +1,12 @@
+{
+  "format": "Buu's Fury (USA) ROM-offset patch manifest",
+  "base_size": 8388608,
+  "output_size": 8388608,
+  "feature_status": "presentation-only",
+  "runtime_claim": "The native Super Saiyan 3 implementation is reused; no new skill ID, code hook, palette pointer, sprite pointer, NPC event, or RAM write is installed.",
+  "changes": [
+    {"offset": "0x583FA", "before": "33", "after": "34", "purpose": "SS3 Goku to SS4 Goku"},
+    {"offset": "0x6A55E", "before": "33", "after": "34", "purpose": "Super Saiyan 3 skill label to Super Saiyan 4"},
+    {"offset": "0x6BAF4", "before": "33", "after": "34", "purpose": "Super Saiyan 3 rank label to Super Saiyan 4"}
+  ]
+}
