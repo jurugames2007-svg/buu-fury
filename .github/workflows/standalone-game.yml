@@ -1,0 +1,42 @@
+name: Standalone Game CI
+on:
+  push:
+    paths:
+      - "standalone_game/**"
+      - ".github/workflows/standalone-game.yml"
+  pull_request:
+    paths:
+      - "standalone_game/**"
+      - ".github/workflows/standalone-game.yml"
+permissions:
+  contents: read
+jobs:
+  static-validation:
+    name: Static validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate Godot bootstrap wiring
+        run: python3 standalone_game/qa/validate_bootstrap.py
+      - name: Validate Oracle manifest
+        run: |
+          python3 - <<'PY'
+          import json
+          with open("standalone_game/qa/oracle_manifest.json", encoding="utf-8") as source:
+              manifest = json.load(source)
+          assert len(manifest["cases"]) == 3000
+          assert manifest["summary"]["total"] == 3000
+          assert manifest["summary"]["passed"] == 0
+          print("PASS: Oracle manifest has 3,000 planned cases and no unearned pass status.")
+          PY
+  godot-headless-parse:
+    name: Godot 4.3 headless parse
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Import and parse Godot project
+        run: godot --headless --path standalone_game --editor --quit
