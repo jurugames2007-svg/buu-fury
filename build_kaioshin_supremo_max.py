@@ -102,22 +102,42 @@ def main() -> None:
     if len(rom) != SIZE:
         raise SystemExit(f"Unexpected base size: {len(rom)} (expected {SIZE})")
 
-    # Safe NPC trampoline: existing type 0x51 (King Kai / Supreme Kai slot)
-    # grants the four skills.  The BL invokes our max-stat reward before the
-    # original NPC handler prologue is replayed.
+    # NPC trampoline for entity type 0x51 (the King Kai / Supreme Kai slot).
+    # It preserves LR and every argument register, then jumps to the *start*
+    # of the original handler.  Replaying only a portion of the old prologue
+    # was the stack-corruption bug in the prior ROM.
     cave = bytearray.fromhex(
-        "0fb4031c1969512910d10c48042101700e2141700f2181701421c17015210171"
+        "0fb5031c19695129"  # push {r0-r3,lr}; entity type -> r1; compare 0x51
     )
-    # The prior sequence ends at 0x3c2320.  Replace its obsolete flag writes
-    # with our routine call, then restore registers and execute original code.
+    bne_pos = len(cave); cave += b"\0\0"
+    ldr_skills_pos = len(cave); cave += b"\0\0"
+    cave += bytes.fromhex(
+        "042101700e2141700f2181701421c17016210171"  # four valid skill slots
+    )
     cave += thumb_bl(CAVE + len(cave), STAT_ROUTINE)
-    cave += bytes.fromhex("c046c046c046c046")
-    cave += bytes.fromhex("0fbc30b5041c00690d1c83b0034b1847")
-    # Literals used by the trampoline.  The first LDR at 0x3c230a reads
-    # the skill-slot base from 0x3c233c; the final LDR resumes Thumb code.
-    cave += struct.pack("<I", 0x0300156C)
-    cave += b"\0\0\0\0\0\0\0\0"
-    cave += struct.pack("<I", 0x08017DAD)  # Thumb resume after original prologue
+    restore_pos = len(cave)
+    cave += bytes.fromhex("0fbc04bc9646")  # restore r0-r3, LR (via r2)
+    ldr_resume_pos = len(cave); cave += b"\0\0"
+    cave += bytes.fromhex("1847")          # bx r3
+    while len(cave) % 4:
+        cave += b"\0"
+    skills_literal = len(cave); cave += struct.pack("<I", 0x0300156C)
+    resume_literal = len(cave); cave += struct.pack("<I", 0x08017DA3)
+
+    # Patch bne -> register restore.
+    delta = restore_pos - (bne_pos + 4)
+    if delta < 0 or delta % 2 or delta // 2 > 0xFF:
+        raise AssertionError("NPC branch target out of range")
+    struct.pack_into("<H", cave, bne_pos, 0xD100 | (delta // 2))
+
+    def patch_ldr(pos: int, reg: int, target: int) -> None:
+        pc = (CAVE + pos + 4) & ~3
+        delta = CAVE + target - pc
+        if delta < 0 or delta % 4 or delta > 1020:
+            raise AssertionError("NPC literal out of range")
+        struct.pack_into("<H", cave, pos, 0x4800 | (reg << 8) | (delta // 4))
+    patch_ldr(ldr_skills_pos, 0, skills_literal)
+    patch_ldr(ldr_resume_pos, 3, resume_literal)
     rom[CAVE:CAVE + len(cave)] = cave
     routine = build_stat_routine(STAT_ROUTINE)
     rom[STAT_ROUTINE:STAT_ROUTINE + len(routine)] = routine
