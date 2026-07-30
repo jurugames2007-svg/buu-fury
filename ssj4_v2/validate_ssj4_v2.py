@@ -85,6 +85,10 @@ ALL_REGIONS = [
     REGION_PALETTE,
 ]
 
+# Auto-grant SSJ4 region (1 byte: default first skill)
+REGION_DEFAULT_SKILL = (0x421D0, 1)
+ALL_REGIONS.append(REGION_DEFAULT_SKILL)
+
 
 class TestResult:
     def __init__(self, name, passed, details=""):
@@ -304,6 +308,22 @@ def test_pal_ptrs():
     )
 
 
+def test_default_first_skill():
+    """Verify that the default first skill is SSJ4 (0x16) instead of empty (0x20).
+    This makes Goku have SSJ4 from 'New Game'.
+    """
+    if not os.path.exists(ROM_OUT):
+        return TestResult("Default first skill = SSJ4", False, "ROM not found")
+    with open(ROM_OUT, "rb") as f:
+        f.seek(0x421D0)
+        byte = f.read(1)[0]
+    return TestResult(
+        "Default first skill = 0x16 (SSJ4)",
+        byte == 0x16,
+        f"actual=0x{byte:02X} (0x16=SSJ4, 0x20=empty, 0x15=SS3)"
+    )
+
+
 def test_no_code_caves():
     """Verify we did not introduce any code caves (no JMPs to 0x3xxxxx area)"""
     if not os.path.exists(ROM_OUT):
@@ -405,6 +425,7 @@ def main():
         test_king_kai_desc,
         test_palette_format,
         test_pal_ptrs,
+        test_default_first_skill,
         test_no_code_caves,
         test_no_io_writes,
         test_idempotence,

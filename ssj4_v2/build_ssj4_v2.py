@@ -132,6 +132,17 @@ KING_KAI_DESC = _encode_str(
     SLOT_KK_DESC
 )
 
+# Skill IDs para auto-asignación
+SKILL_ID_IT = 0x0E
+SKILL_ID_KAME = 0x0F
+SKILL_ID_SS = 0x14
+SKILL_ID_SS4 = 0x16
+
+# Skill que se asigna por defecto al iniciar partida (0x20 = empty en el original)
+# Cambiamos a 0x16 = SSJ4
+# Esto hace que Goku tenga SSJ4 como primer skill desde "New Game"
+DEFAULT_FIRST_SKILL_ID = SKILL_ID_SS4
+
 # Offsets verificados de la ROM base
 OFFSET_FORM_NAME = 0x583F6
 OFFSET_SKILL_NAME = 0x6A544
@@ -143,6 +154,13 @@ OFFSET_PALETTE = 0x7B8A00
 OFFSET_SS4_STRUCT = 0x6AD510
 OFFSET_SS4_PAL_PTR = 0x6AD514  # in struct, offset +4
 OFFSET_SS4_HALO_PAL_PTR = 0x6AD5B8  # in struct, offset +0xA8
+
+# Auto-grant SSJ4: el handler 0x421AE escribe 0x20 como "default first skill"
+# al inicializar un personaje. Cambiar 0x20 -> 0x16 hace que Goku
+# empiece con SSJ4 desde "New Game".
+# Esta función es llamada desde 0x42220 (state 0 del dispatcher)
+# que se activa en el main loop del juego cuando state=0 (new game).
+OFFSET_DEFAULT_FIRST_SKILL = 0x421D0  # movs r0, #0x20 -> #0x16 (SSJ4)
 
 # Strings para King Kai (los 4 diálogos)
 KK_DIALOG_OFFSETS = [0x7B8B20, 0x7B8B94, 0x7B8C10, 0x7B8CA0]
@@ -210,6 +228,18 @@ def build_rom():
     rom[OFFSET_SS4_PAL_PTR:OFFSET_SS4_PAL_PTR+4] = pal_ptr_bytes
     rom[OFFSET_SS4_HALO_PAL_PTR:OFFSET_SS4_HALO_PAL_PTR+4] = pal_ptr_bytes
     print(f"      Form struct pal ptrs @ 0x{OFFSET_SS4_PAL_PTR:06X} and 0x{OFFSET_SS4_HALO_PAL_PTR:06X}: set to 0x087B8A00")
+
+    # 8. Auto-asignar SSJ4 al iniciar partida
+    # El handler 0x421AE escribe 0x20 (empty) como "default first skill" al
+    # inicializar un personaje. Cambiamos 0x20 a 0x16 (SSJ4).
+    # Esta función es llamada desde 0x42220 (state 0 del dispatcher 0x42204)
+    # que se activa en "New Game" (state=0).
+    # El byte 0x421D0 es el immediate value de la instrucción:
+    #   movs r0, #0x20  (default empty skill)
+    # Cambiándolo a movs r0, #0x16 (SSJ4), Goku tendrá SSJ4 desde el inicio.
+    original_skill = rom[OFFSET_DEFAULT_FIRST_SKILL]
+    rom[OFFSET_DEFAULT_FIRST_SKILL] = DEFAULT_FIRST_SKILL_ID
+    print(f"      Default first skill @ 0x{OFFSET_DEFAULT_FIRST_SKILL:06X}: 0x{original_skill:02X} -> 0x{DEFAULT_FIRST_SKILL_ID:02X} (SSJ4)")
     
     # 8. Escribir ROM
     os.makedirs(os.path.dirname(ROM_OUT), exist_ok=True)

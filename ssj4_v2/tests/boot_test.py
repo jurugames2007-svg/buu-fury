@@ -87,10 +87,18 @@ def main():
         (0x06AD514, 4),    # pal ptr 1
         (0x06AD5B8, 4),    # pal ptr 2
         (0x07B8A00, 32),   # palette
+        (0x421D0, 1),      # default first skill = SSJ4
     ]
     total_expected = sum(s for _, s in expected_regions)
     print(f"[ OK] Modificaciones esperadas: {len(expected_regions)} regiones, {total_expected} bytes total")
-    
+
+    # 8b. Verify the default first skill is SSJ4
+    skill = mod[0x421D0]
+    if skill != 0x16:
+        print(f"[FAIL] Default first skill = 0x{skill:02X} (esperado 0x16 = SSJ4)")
+        return 1
+    print(f"[ OK] Default first skill = 0x{skill:02X} (SSJ4) - Goku tiene SSJ4 desde New Game")
+
     # 9. Paleta roja SSJ4
     palette = mod[0x07B8A00:0x07B8A20]
     red_count = 0

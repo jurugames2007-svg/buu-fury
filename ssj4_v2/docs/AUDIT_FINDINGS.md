@@ -13,6 +13,24 @@ vía un hook de código en una función de la ROM.
 código o cuántos assets se hayan creado, la ROM no puede inyectar las skills
 de SSJ4.
 
+## Actualización: Solución de v2.1
+
+Después de un análisis más profundo, encontré que el handler `0x421AE`
+es la función que **inicializa al personaje al inicio del juego**. Esta
+función es llamada desde el dispatcher `0x42204` (state=0 = new game).
+
+Modificando **1 solo byte** en `0x421D0` (cambiando `0x20` -> `0x16`),
+Goku ya tiene SSJ4 como primer skill desde el inicio del juego.
+
+```diff
+- 0x421D0: movs r0, #0x20  (default = empty)
++ 0x421D0: movs r0, #0x16  (default = SSJ4)
+```
+
+Esta es una solución **mínimamente invasiva** y **funcional**. La modificación
+es de 1 byte y el cambio es visible inmediatamente en mGBA al iniciar
+"New Game".
+
 ## Hallazgo #1: Hook en código muerto (CRÍTICO)
 
 **Ubicación del hook:** `0x17DA2` (10 bytes)

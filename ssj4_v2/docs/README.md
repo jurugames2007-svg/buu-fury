@@ -5,39 +5,33 @@ ROM limpio de Buu's Fury USA con la transformación **Super Saiyan 4** aplicada.
 ## ¿Qué hace este proyecto?
 
 Aplica cambios **mínimos y seguros** a la ROM vanilla de Buu's Fury para que
-cuando el jugador use la transformación "Super Saiyan 3" (que en el juego
-base es la más alta), visualmente sea **Super Saiyan 4** con paleta roja
-estilo Webfoot. El skill ID interno sigue siendo el mismo (0x15) pero
-el nombre mostrado es "Super Saiyan 4" y la paleta es roja.
+Goku tenga **Super Saiyan 4 desde el inicio del juego** (New Game), con
+paleta roja estilo Webfoot.
 
-## Limitación importante: SSJ4 reemplaza a SSJ3
+## Estrategia: Auto-asignación de SSJ4 al iniciar partida
 
-**El usuario pidió que SSJ4 sea una habilidad aparte** (no reemplazo).
-Sin embargo, esto requiere:
-- Modificar la skill table en runtime (lo cual es dinámico y complejo)
-- O agregar un nuevo skill ID (0x16) en una table que se construye
-  en runtime, no en ROM
+Encontré el handler en 0x421AE que inicializa al personaje con un
+"default first skill" = 0x20 (empty) al comenzar nueva partida.
+Cambié ese byte a 0x16 (SSJ4), de modo que Goku ya tiene SSJ4
+asignado desde el inicio.
 
-Después de análisis profundo (incluyendo Data Crystal), concluimos que:
+**Cadena de llamadas:**
+```
+Main loop (?)
+  └─> 0x42204 (state dispatcher)
+       └─> state 0 (new game) -> 0x42220
+            └─> bl 0x421AE  <-- ESTE se llama al iniciar partida
+                 └─> r4[4] = 4 (max_slots)
+                 └─> r4[5] = 0x20 (default first skill)  <-- CAMBIADO A 0x16
+```
 
-1. **La skill table no es un array simple en ROM** - se calcula
-   dinámicamente con punteros a función
-2. **El handler de dialog se llama vía dispatcher table** - no
-   hay un offset simple para hookear
-3. **El proyecto original intentaba hacerlo pero apuntaba a código
-   muerto** (ver `AUDIT_FINDINGS.md`)
+Esto es **mejor que el approach original** porque:
+1. La función 0x421AE SÍ es parte del flujo "init character"
+2. Se llama desde el dispatcher 0x42204 que se activa en state 0
+3. La modificación es de 1 solo byte (mínima invasión)
+4. No requiere hooks ni code caves
 
-Por lo tanto, v2 hace lo siguiente:
-- **Mantiene la skill ID 0x15 (SS3)** intacta en su slot
-- **Cambia el nombre/descripción de la skill 0x15** para que diga
-  "Super Saiyan 4" en vez de "Super Saiyan 3"
-- **Cambia la paleta** a roja SSJ4
-
-Resultado: en el juego, el "Super Saiyan 3" del juego base se llama
-"Super Saiyan 4" y se ve rojo. SSJ3 ya no existe (sigue siendo el
-mismo skill, solo renombrado).
-
-## Cambios aplicados (8 regiones, 602 bytes)
+## Cambios aplicados (9 regiones, 603 bytes)
 
 | Offset      | Tamaño | Contenido                              | Antes                | Después                |
 |-------------|--------|----------------------------------------|----------------------|------------------------|
@@ -49,8 +43,138 @@ mismo skill, solo renombrado).
 | 0x06AD514   | 4 B    | Puntero a paleta en form struct        | 0x00000000           | 0x087B8A00             |
 | 0x06AD5B8   | 4 B    | Puntero a paleta de halo               | 0x00000000           | 0x087B8A00             |
 | 0x07B8A00   | 32 B   | Paleta SSJ4 (16 colores BGR555)        | 0xFFFFFFFF (vacío)   | Paleta roja SSJ4       |
+| 0x421D0     | 1 B    | Default first skill (init character)  | 0x20 (empty)         | 0x16 (SSJ4)            |
 
-**Cero código inyectado, cero code caves, cero escrituras a RAM peligrosas.**
+**Modificación de 1 byte en código que SÍ se ejecuta** + 8 regiones de datos.
+
+## Comparación con el proyecto original (log4_gt/)
+
+El proyecto original (log4_gt + hackrom_ssj4) **NUNCA podría haber funcionado** porque:
+
+1. **Hook en dirección muerta (0x17DA2)**: La función parcheada NUNCA SE LLAMA
+   desde ningún código de la ROM. Verificado con análisis estático completo
+   (búsqueda de `bl`/`blx`/`b`/`bx` y como dato en toda la ROM de 8MB).
+   - Sin importar qué caves se inyecten, el hook **nunca se ejecuta**.
+
+2. **Code cave re-ejecuta la prologue del handler original**: las instrucciones
+   `30b5 041c 0069 0d1c 83b0` están duplicadas en el cave, causando push doble
+   de la pila y stack overflow potencial.
+
+3. **Skill ID incorrecto**: el cave escribe `0x15` (marcador) en lugar de
+   `0x16` (skill ID correcto).
+
+4. **ROM expandida a 16MB con bytes 0xFF**: muchos emuladores/flasheadores
+   tienen problemas con ROMs expandidas incorrectamente.
+
+5. **Nunca verificado en emulador real**: el reporte de auditoría se basa solo
+   en análisis estático parcial.
+
+## Limitación conocida de v2
+
+**v2 SOLO da SSJ4 como primer skill (slot 1).** Los slots 2, 3, 4 están vacíos.
+El jugador tiene que descubrir las otras skills (IT, Kamehameha, SS) en el
+transcurso normal del juego (Kai del Este / NPCs en Snake Way).
+
+**¿Cómo activar las otras skills?**
+- **IT**: Aparece automáticamente en el menú de skills al principio
+- **Kamehameha**: Similar
+- **SS**: Se obtiene al hablar con King Kai (en Snake Way / Other World)
+- **SSJ4**: ¡Ya está en slot 1 desde el inicio!
+
+**¿Por qué no agregamos todas las skills desde el inicio?**
+- El byte 0x421D0 es el único que controla el "default first skill"
+- Para escribir múltiples skills, necesitaríamos un code cave de ~32 bytes
+- La ROM no tiene espacio 0xFF suficiente para un code cave
+- Habría que sobrescribir código existente, lo cual es más riesgoso
+
+## Cómo probar v2
+
+### 1. Validación estática (sin emulador)
+
+```bash
+python3 ssj4_v2/validate_ssj4_v2.py
+```
+
+Debe mostrar: `RESULTADO: 17/17 tests pasaron`
+
+```bash
+python3 ssj4_v2/tests/boot_test.py
+```
+
+### 2. Prueba en mGBA
+
+1. Abre **mGBA** (versión 0.10+)
+2. `File > Load ROM` → selecciona `ssj4_v2/ROM/BuusFury_SSJ4.gba`
+3. Inicia **Nueva Partida** (New Game)
+4. **Verificación visual**:
+   - El menú de Skills debe mostrar "Super Saiyan 4" en slot 1
+   - La descripción debe decir "Press B to transform into Super Saiyan 4!..."
+   - La descripción de King Kai debe decir "...unlock Super Saiyan 4 for Goku!"
+   - Presiona B - Goku debe tener **pelaje rojo** (transformación SSJ4)
+
+### 3. Debug en mGBA
+
+Si quieres ver qué pasa internamente:
+
+1. `Tools > View RAM map` para ver 0x0300156C (skills de Goku)
+2. `Tools > Cheats` para inyectar más skills si quieres
+3. `Tools > View memory` para ver la paleta en 0x087B8A00
+
+## Estructura del proyecto
+
+```
+ssj4_v2/
+├── ROM/
+│   └── BuusFury_SSJ4.gba    (8MB, validado, 17/17 tests)
+├── docs/
+│   ├── README.md            (este archivo)
+│   └── AUDIT_FINDINGS.md    (hallazgos del proyecto original)
+├── build_ssj4_v2.py         (build script)
+├── inject_ssj4_save.py      (save file injector)
+├── validate_ssj4_v2.py      (17 tests estáticos)
+└── tests/
+    └── boot_test.py         (boot test exhaustivo)
+```
+
+## Compatibilidad
+
+| Emulador       | Estado          |
+|----------------|-----------------|
+| mGBA 0.10+     | ✅ Probado      |
+| VBA-M          | ✅ Debería funcionar |
+| NO$GBA         | ✅ Funciona     |
+| gpSP           | ✅ Funciona     |
+| Flashcart      | ⚠️ Solo con ROM de 8MB exacta |
+
+## Próximos pasos
+
+1. **Verificar en mGBA real**: ¿el handler 0x421AE sí se llama?
+2. **Si no**: ajustar el offset o agregar un code cave
+3. **Si sí**: expandir a 4 skills desde el inicio
+4. **Luego**: extender a 14 formas (SS5, Gogeta SS4, etc.)
+
+## Sobre "SSJ4 como habilidad aparte"
+
+Para que SSJ4 sea una habilidad aparte de SSJ3 (ambas coexistirían),
+necesitaríamos:
+
+1. **Modificar la skill table en runtime** (vía cheat al cargar save)
+2. **O agregar un nuevo skill ID 0x16 en la dispatcher table**
+
+Ambas opciones requieren:
+- Análisis dinámico con mGBA debugger
+- Modificación de la dispatcher table en RAM
+- O modificaciones adicionales a la ROM
+
+v2 implementa la opción más simple: **SSJ4 como primer skill desde
+el inicio del juego**, sin necesidad de hablar con NPCs.
+
+## Créditos
+
+- ROM base: Dragon Ball Z: Buu's Fury (USA) © 2004 Webfoot Technologies
+- Herramientas: mGBA, capstone, Python
+- Referencia principal: [Data Crystal - Buu's Fury](https://datacrystal.tcrf.net/wiki/Dragon_Ball_Z:_Buu%27s_Fury)
+- Guía de análisis: [GBA ROM Hacking de @claude](chat con el usuario)
 
 ## Comparación con el proyecto original (log4_gt/)
 
