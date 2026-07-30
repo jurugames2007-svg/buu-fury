@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "policy": "Only approved assets with documented redistribution rights may ship in a build.",
+  "assets": []
+}
