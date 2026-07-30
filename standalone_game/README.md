@@ -22,7 +22,7 @@ La puerta de entrada diegética será **Bills**, un NPC en el Mundo Sagrado de l
 
 ## Estado actual
 
-La etapa actual es **preproducción técnica y narrativa**. El siguiente entregable será un vertical slice jugable de la campaña base en el Otro Mundo, con Goku, Snake Way, NPCs, misión, combate y guardado. GT y AF se mostrarán como campañas bloqueadas hasta que la historia base esté terminada. El diseño de campaña y reglas de recursos están en [`GAME_DESIGN.md`](GAME_DESIGN.md) y [`ASSET_POLICY.md`](ASSET_POLICY.md).
+La etapa actual es **preproducción técnica y narrativa**. El siguiente entregable será un vertical slice jugable de la campaña base en el Otro Mundo, con Goku, Snake Way, NPCs, misión, combate y guardado. GT y AF se mostrarán como campañas bloqueadas hasta que la historia base esté terminada. La biblia creativa está en [`CREATIVE_BRIEF_V1.md`](CREATIVE_BRIEF_V1.md); el diseño de campaña y reglas de recursos están en [`GAME_DESIGN.md`](GAME_DESIGN.md) y [`ASSET_POLICY.md`](ASSET_POLICY.md).
 
 ## Ejecutar cuando exista el proyecto Godot
 

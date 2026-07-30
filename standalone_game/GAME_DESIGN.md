@@ -95,7 +95,7 @@ Todo jefe debe tener: telegráficos claros, ventana de castigo, fase de presión
 ## 7. Arquitectura técnica objetivo
 
 - **Motor:** Godot 4.3+ (GDScript inicialmente; C# solo si un subsistema lo justifica).
-- **Resolución base:** 480×270, escalado entero a 1080p/1440p/4K.
+- **Resolución base:** 240×160, escalado entero a 720p/1080p/1440p/4K; scanlines opcionales.
 - **Datos:** recursos `.tres` o JSON validados para personajes, enemigos, misiones, diálogos, objetos y mapas.
 - **Mapas:** TileMap por capas (suelo, colisión, decoración, interacción, navegación).
 - **Guardado:** JSON con versión, migraciones y múltiples ranuras locales.
