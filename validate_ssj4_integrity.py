@@ -49,7 +49,9 @@ def main() -> int:
         actual=header_checksum(data)
         if data[0xBD] != actual:
             print(f'FAIL: {label} header checksum is {data[0xBD]:02X}; computed {actual:02X}.'); ok=False
-        print(f'  title={data[0xA0:0xAC].rstrip(b"\\0").decode("ascii", "replace")!r} code={data[0xAC:0xB0].decode("ascii", "replace")!r} header_checksum={data[0xBD]:02X}')
+        title = data[0xA0:0xAC].rstrip(bytes([0])).decode("ascii", "replace")
+        code = data[0xAC:0xB0].decode("ascii", "replace")
+        print(f'  title={title!r} code={code!r} header_checksum={data[0xBD]:02X}')
     if len(base) != len(hack):
         print('FAIL: byte-level diff is undefined because ROM sizes differ.')
         return 1
