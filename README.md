@@ -1,28 +1,43 @@
-# The Legacy of Goku 4 — Dragon Ball GT, AF & God of Destruction DLC
+# The Legacy of Goku 4 — investigación de expansión para Buu's Fury
 
-ROM expansion for **Dragon Ball Z: Buu's Fury (USA)** that adds **Dragon Ball GT**, **AF (Zaiko)**, and **Other World God of Destruction (Beerus & Whis)** content as an official-feeling sequel expansion.
+> **Estado de ingeniería: no aprobar como expansión funcional.** Los assets, GDD
+> y prototipos de este repositorio no prueban que el motor los cargue. La antigua
+> ROM expandida mide un tamaño inválido y no tiene evidencia de runtime. Ver
+> [`AUDIT_STATUS.md`](AUDIT_STATUS.md) antes de descargar o probar cualquier ROM.
 
-## Play this
+El objetivo es construir una expansión real de **Dragon Ball Z: Buu's Fury (USA)**
+por etapas, con diffs mínimos, hooks demostrados y pruebas en emulador.
 
-| File | Description |
-|------|-------------|
-| [`log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba`](log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba) | **Main ROM (16 MB)** |
-| [`LegacyOfGoku4_GT_DLC.zip`](LegacyOfGoku4_GT_DLC.zip) | Full package (ROM + assets + GDD + QA tools) |
-| [`MANUAL_LEGACY_OF_GOKU_4_COMPLETE.md`](MANUAL_LEGACY_OF_GOKU_4_COMPLETE.md) | Comprehensive Manual, Reskin vs. Sequel analysis & Bandai Namco QA audit |
-| `Dragon Ball Z - Buu's Fury (USA).gba` | Clean base ROM (vanilla) |
+## ROM disponible para pruebas de base
 
-### How to start
+| Archivo | Estado verificable |
+|------|---------------------|
+| [`hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_SAFE_8MB.gba`](hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_SAFE_8MB.gba) | **8 MiB, header válido, diff de 3 bytes.** Renombra la presentación nativa SSJ3 a SSJ4; no implementa una forma SSJ4 nueva. |
+| `Dragon Ball Z - Buu's Fury (USA).gba` | ROM base de 8 MiB usada por el build reproducible. |
+| `hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_HACK.gba` | Artefacto legacy sin aprobar; no usar como release. |
 
-1. Open **mGBA** (or another GBA emulator)
-2. Load `log4_gt/ROM/LegacyOfGoku4_GT_DLC.gba`
-3. **New Game** → reach **Snake Way** (Other World)
-4. Talk to the extra **East Kai** NPC (King Kai is still there, unchanged) to unlock **SSJ4 Goku** (form ID 1) and starter skills.
-5. **Whis's Divine Portal & Beerus's Planet**: Speak with **Whis** on Snake Way / Planet of the Kais to enter the **Planeta de Bills (Beerus's Planet)** in the Other World.
-6. **Whis's Gourmet Shop**: Purchase *Beerus's Pudding*, *Whis's Sundae*, and *Tree of Might Fruit* to gain permanent STR and divine defense buffs.
-7. **Post-Game Boss Zaiko (Xicor)**: After defeating Kid Buu, travel to the deep woods of **East District 439 Forest** (outside Adult Gohan's house) to challenge **Zaiko** (`99,999 HP`, Level 200).
-8. **Ultimate Fusion — Gogeta SSJ4**: Unlock Form ID `0x1B` and **Big Bang Kamehameha x100** after defeating Zaiko and clearing Beerus's divine trial (`150,000 HP`, Level 250).
+### Reproducir y validar la base segura
 
-### Form ladder
+```sh
+python3 build_ssj4_safe_8mb.py
+python3 validate_ssj4_integrity.py \
+  "Dragon Ball Z - Buu's Fury (USA).gba" \
+  hackrom_ssj4/ROM/DBZ_Buus_Fury_SSJ4_SAFE_8MB.gba \
+  --allow 0x583FA:0x583FB \
+  --allow 0x6A55E:0x6A55F \
+  --allow 0x6BAF4:0x6BAF5
+python3 inspect_form_tables.py
+```
+
+La siguiente prueba requerida es runtime en mGBA: transformación SSJ3 con
+watchpoints sobre `0x0806B6D94` y `0x0806AD510`. Las instrucciones y límites se
+encuentran en [`FORM_TABLE_RECON.md`](FORM_TABLE_RECON.md).
+
+## Material de diseño legacy (no verificado en runtime)
+
+Lo siguiente es documentación/artefacts de diseño heredados. No debe interpretarse como una lista de features jugables hasta que cada elemento tenga una tabla/puntero del engine, trace de emulador y prueba de save/load.
+
+### Form ladder propuesta
 
 **Gogeta SSJ4 (form 0x1B) > SS4 (form 1) > SS3 (form 5, original) > SS1 (form 3) > Base (form 0)**
 
