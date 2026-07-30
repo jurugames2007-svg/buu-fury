@@ -6,18 +6,45 @@ Un ARPG 2D de vista isométrica/3-4 superior con ritmo legible, exploración den
 
 El juego no pretende copiar binarios, código, mapas ni formatos de los títulos de GBA. Conserva una filosofía de diseño: zonas compactas, objetivos claros, combate físico/ki, progresión por niveles y personajes con habilidades diferenciadas.
 
-## 2. Campaña GT: Black Star Dragon Balls → Baby
+## 2. Campañas, DLC y acceso por Bills
+
+### Campaña base — Buu's Fury Reborn
+
+Es el punto de entrada. Reproduce de forma **original** la progresión de aventura/ARPG de la saga Majin Buu: exploración, capítulos de personajes, misiones, combates, equipo, transformaciones y jefes. No reutiliza ROM, código, mapas ni datos del juego de GBA.
+
+| Arco | Ejemplos de zonas | Hitos |
+|---|---|---|
+| Torneo del Otro Mundo | Otro Mundo, Snake Way, planeta de Kaio | Tutorial, Goku y primeras técnicas |
+| Gran Saiyaman / Torneo | Ciudad Satán, instituto, torneo | Gohan, Videl, Goten y Trunks |
+| Babidi y Majin Vegeta | Nave de Babidi, páramos, mundo de los Kai | Majin Vegeta, Dabura, Buu |
+| Final Buu | Tierra devastada, Otro Mundo, mundo de los Kai | Vegito, Uub, Kid Buu y final base |
+
+### NPC hub: Bills
+
+Tras vencer a Kid Buu, Bills aparece en el **Mundo Sagrado de los Kaioshin**. Su interfaz es diegética: conversa, muestra el estado de cada línea y abre portales. No reemplaza contenido de la campaña base.
+
+| Portal de Bills | Requisito | Contenido |
+|---|---|---|
+| **GT DLC: Grand Tour** | Finalizar campaña base | Black Star Dragon Balls, Amega, Luud, M-2 y Baby |
+| **GT: desafíos posteriores** | Completar Baby | Super 17 y Shadow Dragons, según el plan de producción |
+| **AF DLC: Divine Aftermath** | Finalizar GT principal y desafío de Bills | Zaiko, Karat, Evil Goku, Angel Z, Void World y líneas AF |
+
+El portal se mantiene disponible para volver a zonas anteriores, completar secretos y cambiar de campaña sin destruir el progreso.
+
+### GT DLC — Black Star Dragon Balls → Baby
 
 | Acto | Zonas principales | Jefes / hitos | Sistemas que se desbloquean |
 |---|---|---|---|
-| Prólogo | Mirador, Capsule Corp, nave Grand Tour | Tutorial Goku/Uub; despegue | Movimiento, ataque, ki, diálogo, misión principal |
-| I — Amega | Amega ciudad, desierto, palacio Don Kee | Don Kee, Legic | Trunks y Pan; habilidades de grupo; inventario |
-| II — Mundos extraños | Masu, Jaga Bada, planeta gusano | Gigante, Zunama, Para Brothers | Radar de Giru, puzles ambientales, primera Black Star Ball |
-| III — Luud | Santuario Luud, torre de Doll Taki | Muchi Muchi, Lord Luud | Estados, rescate, combate de varios objetivos |
-| IV — M-2 | Ciudad mecánica, fábrica Sigma, laboratorio Mew | Sigma Force, General Rilldo, Dr. Mew | Mejoras de Giru, modificación de habilidades, equipo tecnológico |
-| V — Regreso | Tierra, hospital Pital, Lookout, Plant Tuffle | Baby, Baby Vegeta, Super Baby Vegeta | Transformaciones SSJ/SSJ3/SSJ4, aliados y combate de equipo |
+| Prólogo | Mirador, Capsule Corp, nave Grand Tour | Tutorial Goku/Uub; despegue | Viaje espacial, diálogo y misión principal |
+| I — Amega | Amega ciudad, desierto, palacio Don Kee | Don Kee, Legic | Pan, Trunks y habilidades de grupo |
+| II — Mundos extraños | Masu, Jaga Bada, planeta gusano | Gigante, Zunama, Para Brothers | Radar de Giru y puzles ambientales |
+| III — Luud | Santuario Luud, torre de Doll Taki | Muchi Muchi, Lord Luud | Estados, rescate y combate multiobjetivo |
+| IV — M-2 | Ciudad mecánica, fábrica Sigma, laboratorio Mew | Sigma Force, Rilldo, Dr. Mew | Mejoras de Giru y equipo tecnológico |
+| V — Regreso | Tierra, hospital Pital, Lookout, Plant Tuffle | Baby, Baby Vegeta, Super Baby Vegeta | SSJ, SSJ3, SSJ4 y aliados |
 
-El final de esta campaña abre el contenido posterior: Super 17, Shadow Dragons y la línea AF.
+### AF DLC — Divine Aftermath
+
+Estructura posterior con Zaiko, Karat, Evil Goku, Angel Z, Irina, Void World y las transformaciones AF. Cada arco se modelará como un capítulo independiente para no bloquear la campaña principal ni convertir la primera entrega en un proyecto imposible de probar.
 
 ## 3. Bucle jugable
 
@@ -76,12 +103,12 @@ Todo jefe debe tener: telegráficos claros, ventana de castigo, fase de presión
 
 ## 8. Primer vertical slice verificable
 
-**Amega: llegada → recuperación de nave → Legic**
+**Campaña base: Otro Mundo → Snake Way → primera misión de Goku**
 
 Criterios de listo:
 - Menú inicial, nueva partida y guardado/carga funcionan.
-- Goku niño, Pan y Trunks se pueden alternar.
-- Un mapa exterior, pueblo, palacio y combate contra Legic conectados sin pantallas negras.
-- Un NPC con diálogo ramificado, cofre, misión, tienda y dos secretos.
-- Combate con ataque, ki, bloqueo, daño, enemigo común y jefe por fases.
-- Build Windows probado desde carpeta limpia.
+- Goku controlable con ataque, ki, bloqueo, esquiva, daño, enemigo común y jefe por fases.
+- Un mapa exterior, zona interior, NPC con diálogo ramificado, cofre, misión, tienda y dos secretos.
+- Pantalla de campaña que muestra GT y AF como contenido bloqueado, sin simular que ya están terminados.
+- Tras completar la campaña base completa, Bills se habilita como NPC/portal de DLC.
+- Build Windows probado desde una carpeta limpia antes de distribuirlo.
